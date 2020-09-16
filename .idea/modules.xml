@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/changgou.iml" filepath="$PROJECT_DIR$/.idea/changgou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-common/changgou-common.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-common/changgou-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-common-db/changgou-common-db.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-common-db/changgou-common-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-eureka/changgou-eureka.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-eureka/changgou-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-gateway/changgou-gateway.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-gateway/changgou-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-parent.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/changgou-service-goods.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/changgou-service-goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" />
+    </modules>
+  </component>
+</project>
