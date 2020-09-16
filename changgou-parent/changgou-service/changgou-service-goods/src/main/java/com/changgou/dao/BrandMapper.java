@@ -1,6 +1,7 @@
 package com.changgou.dao;
 
 import com.changgou.goods.pojo.Brand;
+import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
@@ -14,6 +15,7 @@ import tk.mybatis.mapper.common.Mapper;
  *          修改数据, Mapper.updateByPrimeKey(T)
  *          ...
  */
+@Repository
 public interface BrandMapper extends Mapper<Brand> {
 
 }

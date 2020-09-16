@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="" />
+    <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BaseExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/dao/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/dao/BrandMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/BrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/impl/BrandServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +44,9 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1hXYYQciUyZJ1296J2CkOMm1HBp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -57,21 +65,21 @@
     <property name="project.structure.proportion" value="0.18046875" />
     <property name="project.structure.side.proportion" value="0.3101145" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service" />
-      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service-api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service-api\changgou-service-goods-api\src\main\java" />
       <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service-api\changgou-service-goods-api\src\main\java\com\changgou\goods\pojo" />
       <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-common\src\main\java\entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service" />
+      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service-api" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GoodsApplication">
@@ -201,8 +209,12 @@
       <workItem from="1600232870017" duration="13000" />
       <workItem from="1600232895117" duration="46000" />
       <workItem from="1600232978528" duration="114000" />
+      <workItem from="1600233124119" duration="9705000" />
     </task>
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="wsl.exe" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -221,42 +233,46 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="475" y="203" width="1111" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1600176196766" />
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1600242413632">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1600242413632" />
     <state x="752" y="236" key="FileChooserDialogImpl" timestamp="1600225894871">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="752" y="236" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1600225894871" />
-    <state width="1993" height="361" key="GridCell.Tab.0.bottom" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.0.bottom" timestamp="1600243256520">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.0.center" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
+    <state width="967" height="327" key="GridCell.Tab.0.center" timestamp="1600243256518">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.0.left" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256518" />
+    <state width="967" height="327" key="GridCell.Tab.0.left" timestamp="1600243256518">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.0.right" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256518" />
+    <state width="967" height="327" key="GridCell.Tab.0.right" timestamp="1600243256519">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.1.bottom" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256519" />
+    <state width="967" height="327" key="GridCell.Tab.1.bottom" timestamp="1600243256520">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.1.center" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
+    <state width="967" height="327" key="GridCell.Tab.1.center" timestamp="1600243256520">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.1.left" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
+    <state width="967" height="327" key="GridCell.Tab.1.left" timestamp="1600243256520">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state width="1993" height="361" key="GridCell.Tab.1.right" timestamp="1600232505803">
+    <state width="967" height="327" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
+    <state width="967" height="327" key="GridCell.Tab.1.right" timestamp="1600243256520">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1993" height="361" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
+    <state width="967" height="327" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
     <state width="1993" height="361" key="GridCell.Tab.2.bottom" timestamp="1600232505803">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -273,10 +289,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1993" height="361" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
-    <state x="377" y="27" key="SettingsEditor" timestamp="1600233076622">
+    <state x="377" y="27" key="SettingsEditor" timestamp="1600243342101">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="377" y="27" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1600233076622" />
+    <state x="377" y="27" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1600243342101" />
     <state x="805" y="181" key="SpringBootCustomization" timestamp="1600231731790">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -289,6 +305,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="585" y="127" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1600226341724" />
+    <state x="603" y="77" width="840" height="1034" key="search.everywhere.popup" timestamp="1600243297045">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="603" y="77" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1600243297045" />
     <state x="481" y="164" key="spring file set editor" timestamp="1600227795307">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
