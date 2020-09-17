@@ -8,11 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BaseExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/controller/BrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/dao/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/dao/BrandMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/BrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/changgou-service-file.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/java/com/changgou/FileApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/java/com/changgou/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/java/com/changgou/file/FastDFSFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/java/com/changgou/util/FastDFSUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/src/main/resources/fdfs_client.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +55,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="JavaSE-1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.18046875" />
     <property name="project.structure.side.proportion" value="0.3101145" />
@@ -82,7 +89,20 @@
       <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service-api" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GoodsApplication">
+  <component name="RunManager" selected="Spring Boot.FileApplication">
+    <configuration name="FastDFSUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.changgou.util.FastDFSUtil" />
+      <module name="changgou-service-file" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.changgou.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IdWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="entity.IdWorker" />
       <module name="changgou-common" />
@@ -92,6 +112,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +138,19 @@
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.EurekaApplication" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="changgou-service-file" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.changgou.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.FileApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,8 +232,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GoodsApplication" />
+        <item itemvalue="Spring Boot.FileApplication" />
+        <item itemvalue="Application.FastDFSUtil" />
         <item itemvalue="Spring Boot.EurekaApplication" />
+        <item itemvalue="Spring Boot.GoodsApplication" />
         <item itemvalue="Application.IdWorker" />
       </list>
     </recent_temporary>
@@ -209,7 +255,8 @@
       <workItem from="1600232870017" duration="13000" />
       <workItem from="1600232895117" duration="46000" />
       <workItem from="1600232978528" duration="114000" />
-      <workItem from="1600233124119" duration="9705000" />
+      <workItem from="1600233124119" duration="11447000" />
+      <workItem from="1600306694980" duration="12023000" />
     </task>
     <servers />
   </component>
@@ -218,6 +265,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -233,46 +283,50 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="475" y="203" width="1111" height="858" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1600176196766" />
-    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1600242413632">
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1600327957849">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1600242413632" />
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1600327957849" />
+    <state x="702" y="281" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600261718941">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="702" y="281" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1600261718941" />
     <state x="752" y="236" key="FileChooserDialogImpl" timestamp="1600225894871">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="752" y="236" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1600225894871" />
-    <state width="967" height="327" key="GridCell.Tab.0.bottom" timestamp="1600243256520">
+    <state width="967" height="309" key="GridCell.Tab.0.bottom" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
-    <state width="967" height="327" key="GridCell.Tab.0.center" timestamp="1600243256518">
+    <state width="967" height="309" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.0.center" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256518" />
-    <state width="967" height="327" key="GridCell.Tab.0.left" timestamp="1600243256518">
+    <state width="967" height="309" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.0.left" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256518" />
-    <state width="967" height="327" key="GridCell.Tab.0.right" timestamp="1600243256519">
+    <state width="967" height="309" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.0.right" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256519" />
-    <state width="967" height="327" key="GridCell.Tab.1.bottom" timestamp="1600243256520">
+    <state width="967" height="309" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.1.bottom" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
-    <state width="967" height="327" key="GridCell.Tab.1.center" timestamp="1600243256520">
+    <state width="967" height="309" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.1.center" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
-    <state width="967" height="327" key="GridCell.Tab.1.left" timestamp="1600243256520">
+    <state width="967" height="309" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.1.left" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
-    <state width="967" height="327" key="GridCell.Tab.1.right" timestamp="1600243256520">
+    <state width="967" height="309" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
+    <state width="967" height="309" key="GridCell.Tab.1.right" timestamp="1600348716713">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="967" height="327" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600243256520" />
+    <state width="967" height="309" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600348716713" />
     <state width="1993" height="361" key="GridCell.Tab.2.bottom" timestamp="1600232505803">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -289,6 +343,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1993" height="361" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1600232505803" />
+    <state x="0" y="231" key="IDE.errors.dialog" timestamp="1600349611793">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="0" y="231" key="IDE.errors.dialog/0.0.2048.1112@0.0.2048.1112" timestamp="1600349611793" />
     <state x="377" y="27" key="SettingsEditor" timestamp="1600243342101">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -301,14 +359,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="678" y="235" width="675" height="655" key="StructurePopup/0.0.2048.1112@0.0.2048.1112" timestamp="1600224265863" />
-    <state x="585" y="127" key="new project wizard" timestamp="1600226341724">
+    <state x="276" y="127" key="new project wizard" timestamp="1600327172714">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="585" y="127" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1600226341724" />
-    <state x="603" y="77" width="840" height="1034" key="search.everywhere.popup" timestamp="1600243297045">
+    <state x="276" y="127" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1600327172714" />
+    <state x="602" y="77" width="840" height="1034" key="search.everywhere.popup" timestamp="1600348061410">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="603" y="77" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1600243297045" />
+    <state x="602" y="77" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1600348061410" />
     <state x="481" y="164" key="spring file set editor" timestamp="1600227795307">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

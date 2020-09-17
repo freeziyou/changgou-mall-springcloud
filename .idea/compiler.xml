@@ -11,6 +11,7 @@
         <module name="changgou-service-goods-api" />
         <module name="changgou-eureka" />
         <module name="changgou-common" />
+        <module name="changgou-service-file" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13">
@@ -21,6 +22,7 @@
       <module name="changgou-parent" target="1.8" />
       <module name="changgou-service" target="1.8" />
       <module name="changgou-service-api" target="1.8" />
+      <module name="changgou-service-file" target="1.8" />
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
@@ -35,6 +37,7 @@
       <module name="changgou-parent" options="-parameters" />
       <module name="changgou-service" options="-parameters" />
       <module name="changgou-service-api" options="-parameters" />
+      <module name="changgou-service-file" options="-parameters" />
       <module name="changgou-service-goods" options="-parameters" />
       <module name="changgou-service-goods-api" options="-parameters" />
       <module name="changgou-web" options="-parameters" />
