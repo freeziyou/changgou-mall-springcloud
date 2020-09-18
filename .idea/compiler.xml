@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="changgou-service-goods" />
-        <module name="changgou-common-db" />
         <module name="changgou-service-goods-api" />
         <module name="changgou-eureka" />
+        <module name="changgou-common-db" />
+        <module name="code-template" />
         <module name="changgou-common" />
         <module name="changgou-service-file" />
       </profile>
@@ -26,6 +27,7 @@
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
+      <module name="code-template" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

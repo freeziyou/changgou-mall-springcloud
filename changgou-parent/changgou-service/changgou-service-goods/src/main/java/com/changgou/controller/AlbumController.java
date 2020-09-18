@@ -34,7 +34,7 @@ public class AlbumController {
     @PostMapping("/search/{page}/{size}")
     public Result<PageInfo> findPage(@RequestBody(required = false) Album album, @PathVariable int page, @PathVariable int size) {
         PageInfo<Album> pageInfo = albumService.findPage(album, page, size);
-        return new Result<PageInfo>(true, StatusCode.OK, "页面条件查询成功!", pageInfo);
+        return new Result(true, StatusCode.OK, "页面条件查询成功!", pageInfo);
     }
 
     /**

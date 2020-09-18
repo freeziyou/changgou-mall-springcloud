@@ -33,7 +33,7 @@ public class TemplateController {
     @PostMapping("/search/{page}/{size}")
     public Result<PageInfo> findPage(@RequestBody(required = false) Template template, @PathVariable int page, @PathVariable int size) {
         PageInfo<Template> pageInfo = templateService.findPage(template, page, size);
-        return new Result<PageInfo>(true, StatusCode.OK, "页面条件查询成功!", pageInfo);
+        return new Result(true, StatusCode.OK, "页面条件查询成功!", pageInfo);
     }
 
     /**

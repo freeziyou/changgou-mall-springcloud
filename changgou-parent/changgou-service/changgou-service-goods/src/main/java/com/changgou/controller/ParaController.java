@@ -35,7 +35,7 @@ public class ParaController {
     public Result<PageInfo> findPage(@RequestBody(required = false) Para para, @PathVariable int page, @PathVariable int size) {
         //执行搜索
         PageInfo<Para> pageInfo = paraService.findPage(para, page, size);
-        return new Result<PageInfo>(true, StatusCode.OK, "分页条件查询成功!", pageInfo);
+        return new Result(true, StatusCode.OK, "分页条件查询成功!", pageInfo);
     }
 
     /**
