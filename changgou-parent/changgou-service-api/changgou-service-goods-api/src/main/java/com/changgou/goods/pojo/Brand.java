@@ -6,11 +6,12 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/****
- * @Author: admin
- * @Description: Brand 构建
- * @Date 2019/6/14 19:13
- *****/
+/**
+ * @author Dylan Guo
+ * @date 9/16/2020 12:51
+ * @description TODO
+ */
+
 @ApiModel(description = "Brand", value = "Brand")
 @Table(name = "tb_brand")
 public class Brand implements Serializable {
@@ -51,7 +52,6 @@ public class Brand implements Serializable {
     @ApiModelProperty(value = "排序", required = false)
     @Column(name = "seq")
     private Integer seq;
-
 
     public Integer getId() {
         return id;

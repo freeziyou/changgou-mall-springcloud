@@ -47,7 +47,6 @@ public class BrandController {
     @GetMapping("/search/{page}/{size}")
     public Result<PageInfo> findPage(@PathVariable int page, @PathVariable int size) {
         PageInfo<Brand> pageInfo = brandService.findPage(page, size);
-        int a = 10/0;
         return new Result<PageInfo>(true, StatusCode.OK, "分页查询成功!", pageInfo);
     }
 
@@ -83,18 +82,30 @@ public class BrandController {
      * @return 结果消息
      */
     @PostMapping("/{id}")
-    public Result update(@RequestBody Brand brand, @PathVariable(value = "id") Integer id) {
+    public Result update(@RequestBody Brand brand, @PathVariable Integer id) {
         brand.setId(id);
         brandService.update(brand);
         return new Result(true, StatusCode.OK, "修改成功!");
     }
 
+    /**
+     * 添加品牌数据
+     *
+     * @param brand 品牌
+     * @return 结果消息
+     */
     @PostMapping
     public Result add(@RequestBody Brand brand) {
         brandService.add(brand);
         return new Result(true, StatusCode.OK, "添加Brand成功!");
     }
 
+    /**
+     * 根据 ID 查找品牌数据
+     *
+     * @param id id
+     * @return 结果消息
+     */
     @GetMapping("/{id}")
     public Result<Brand> findById(@PathVariable(value = "id") Integer id) {
         Brand brand = brandService.findById(id);
@@ -104,7 +115,9 @@ public class BrandController {
     }
 
     /**
-     * 查询所有品牌
+     * 查找所有品牌数据
+     *
+     * @return 结果消息
      */
     @GetMapping()
     public Result<List<Brand>> findAll() {

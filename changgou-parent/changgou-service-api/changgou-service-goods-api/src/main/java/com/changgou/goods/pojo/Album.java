@@ -3,65 +3,71 @@ package com.changgou.goods.pojo;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/****
- * @Author:admin
- * @Description:Album构建
- * @Date 2019/6/14 19:13
- *****/
-@Table(name="tb_album")
-public class Album implements Serializable{
+/**
+ * @author Dylan Guo
+ * @date 9/16/2020 12:51
+ * @description TODO
+ */
 
-	@Id
+@Table(name = "tb_album")
+public class Album implements Serializable {
+
+    /**
+     * 编号
+     */
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    private Long id;
 
-	private Long id;//编号
-
-
+    /**
+     * 相册名称
+     */
     @Column(name = "title")
-	private String title;//相册名称
+    private String title;
+
+    /**
+     * 相册封面
+     */
     @Column(name = "image")
-	private String image;//相册封面
+    private String image;
+
+    /**
+     * 图片列表
+     */
     @Column(name = "image_items")
-	private String imageItems;//图片列表
+    private String imageItems;
 
+    public Long getId() {
+        return id;
+    }
 
-	//get方法
-	public Long getId() {
-		return id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	//set方法
-	public void setId(Long id) {
-		this.id = id;
-	}
-	//get方法
-	public String getTitle() {
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	//set方法
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	//get方法
-	public String getImage() {
-		return image;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	//set方法
-	public void setImage(String image) {
-		this.image = image;
-	}
-	//get方法
-	public String getImageItems() {
-		return imageItems;
-	}
+    public String getImage() {
+        return image;
+    }
 
-	//set方法
-	public void setImageItems(String imageItems) {
-		this.imageItems = imageItems;
-	}
+    public void setImage(String image) {
+        this.image = image;
+    }
 
+    public String getImageItems() {
+        return imageItems;
+    }
+
+    public void setImageItems(String imageItems) {
+        this.imageItems = imageItems;
+    }
 
 }
