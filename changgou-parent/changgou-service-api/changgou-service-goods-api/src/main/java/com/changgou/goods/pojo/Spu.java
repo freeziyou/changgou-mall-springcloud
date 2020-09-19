@@ -1,292 +1,326 @@
 package com.changgou.goods.pojo;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-/****
- * @Author:admin
- * @Description:Spu构建
- * @Date 2019/6/14 19:13
- *****/
-@ApiModel(description = "Spu",value = "Spu")
-@Table(name="tb_spu")
-public class Spu implements Serializable{
+/**
+ * @author Dylan Guo
+ * @date 9/17/2020 22:14
+ * @description TODO
+ */
+@Table(name = "tb_spu")
+public class Spu implements Serializable {
 
-	@ApiModelProperty(value = "主键",required = false)
-	@JsonSerialize(using = ToStringSerializer.class)
-	@Id
-	@Column(name = "id")
-	private Long id;//主键
-	@ApiModelProperty(value = "货号",required = false)
+    /**
+     * 主键
+     */
+    @Id
+    @Column(name = "id")
+    private Long id;
+
+    /**
+     * 货号
+     */
     @Column(name = "sn")
-	private String sn;//货号
-	@ApiModelProperty(value = "SPU名",required = false)
+    private String sn;
+
+    /**
+     * SPU名
+     */
     @Column(name = "name")
-	private String name;//SPU名
-	@ApiModelProperty(value = "副标题",required = false)
+    private String name;
+
+    /**
+     * 副标题
+     */
     @Column(name = "caption")
-	private String caption;//副标题
-	@ApiModelProperty(value = "品牌ID",required = false)
+    private String caption;
+
+    /**
+     * 品牌ID
+     */
     @Column(name = "brand_id")
-	private Integer brandId;//品牌ID
-	@ApiModelProperty(value = "一级分类",required = false)
+    private Integer brandId;
+
+    /**
+     * 一级分类
+     */
     @Column(name = "category1_id")
-	private Integer category1Id;//一级分类
-	@ApiModelProperty(value = "二级分类",required = false)
+    private Integer category1Id;
+
+    /**
+     * 二级分类
+     */
     @Column(name = "category2_id")
-	private Integer category2Id;//二级分类
-	@ApiModelProperty(value = "三级分类",required = false)
+    private Integer category2Id;
+
+    /**
+     * 三级分类
+     */
     @Column(name = "category3_id")
-	private Integer category3Id;//三级分类
-	@ApiModelProperty(value = "模板ID",required = false)
+    private Integer category3Id;
+
+    /**
+     * 模板ID
+     */
     @Column(name = "template_id")
-	private Integer templateId;//模板ID
-	@ApiModelProperty(value = "运费模板id",required = false)
+    private Integer templateId;
+
+    /**
+     * 运费模板id
+     */
     @Column(name = "freight_id")
-	private Integer freightId;//运费模板id
-	@ApiModelProperty(value = "图片",required = false)
+    private Integer freightId;
+
+    /**
+     * 图片
+     */
     @Column(name = "image")
-	private String image;//图片
-	@ApiModelProperty(value = "图片列表",required = false)
+    private String image;
+
+    /**
+     * 图片列表
+     */
     @Column(name = "images")
-	private String images;//图片列表
-	@ApiModelProperty(value = "售后服务",required = false)
+    private String images;
+
+    /**
+     * 售后服务
+     */
     @Column(name = "sale_service")
-	private String saleService;//售后服务
-	@ApiModelProperty(value = "介绍",required = false)
+    private String saleService;
+
+    /**
+     * 介绍
+     */
     @Column(name = "introduction")
-	private String introduction;//介绍
-	@ApiModelProperty(value = "规格列表",required = false)
+    private String introduction;
+
+    /**
+     * 规格列表
+     */
     @Column(name = "spec_items")
-	private String specItems;//规格列表
-	@ApiModelProperty(value = "参数列表",required = false)
+    private String specItems;
+
+    /**
+     * 参数列表
+     */
     @Column(name = "para_items")
-	private String paraItems;//参数列表
-	@ApiModelProperty(value = "销量",required = false)
+    private String paraItems;
+
+    /**
+     * 销量
+     */
     @Column(name = "sale_num")
-	private Integer saleNum;//销量
-	@ApiModelProperty(value = "评论数",required = false)
+    private Integer saleNum;
+
+    /**
+     * 评论数
+     */
     @Column(name = "comment_num")
-	private Integer commentNum;//评论数
-	@ApiModelProperty(value = "是否上架",required = false)
+    private Integer commentNum;
+
+    /**
+     * 是否上架,0已下架，1已上架
+     */
     @Column(name = "is_marketable")
-	private String isMarketable;//是否上架
-	@ApiModelProperty(value = "是否启用规格",required = false)
+    private String isMarketable;
+
+    /**
+     * 是否启用规格
+     */
     @Column(name = "is_enable_spec")
-	private String isEnableSpec;//是否启用规格
-	@ApiModelProperty(value = "是否删除",required = false)
+    private String isEnableSpec;
+
+    /**
+     * 是否删除,0:未删除，1：已删除
+     */
     @Column(name = "is_delete")
-	private String isDelete;//是否删除
-	@ApiModelProperty(value = "审核状态",required = false)
+    private String isDelete;
+
+    /**
+     * 审核状态，0：未审核，1：已审核，2：审核不通过
+     */
     @Column(name = "status")
-	private String status;//审核状态
+    private String status;
 
 
-	//get方法
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	//set方法
-	public void setId(Long id) {
-		this.id = id;
-	}
-	//get方法
-	public String getSn() {
-		return sn;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	//set方法
-	public void setSn(String sn) {
-		this.sn = sn;
-	}
-	//get方法
-	public String getName() {
-		return name;
-	}
+    public String getSn() {
+        return sn;
+    }
 
-	//set方法
-	public void setName(String name) {
-		this.name = name;
-	}
-	//get方法
-	public String getCaption() {
-		return caption;
-	}
+    public void setSn(String sn) {
+        this.sn = sn;
+    }
 
-	//set方法
-	public void setCaption(String caption) {
-		this.caption = caption;
-	}
-	//get方法
-	public Integer getBrandId() {
-		return brandId;
-	}
+    public String getName() {
+        return name;
+    }
 
-	//set方法
-	public void setBrandId(Integer brandId) {
-		this.brandId = brandId;
-	}
-	//get方法
-	public Integer getCategory1Id() {
-		return category1Id;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	//set方法
-	public void setCategory1Id(Integer category1Id) {
-		this.category1Id = category1Id;
-	}
-	//get方法
-	public Integer getCategory2Id() {
-		return category2Id;
-	}
+    public String getCaption() {
+        return caption;
+    }
 
-	//set方法
-	public void setCategory2Id(Integer category2Id) {
-		this.category2Id = category2Id;
-	}
-	//get方法
-	public Integer getCategory3Id() {
-		return category3Id;
-	}
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
 
-	//set方法
-	public void setCategory3Id(Integer category3Id) {
-		this.category3Id = category3Id;
-	}
-	//get方法
-	public Integer getTemplateId() {
-		return templateId;
-	}
+    public Integer getBrandId() {
+        return brandId;
+    }
 
-	//set方法
-	public void setTemplateId(Integer templateId) {
-		this.templateId = templateId;
-	}
-	//get方法
-	public Integer getFreightId() {
-		return freightId;
-	}
+    public void setBrandId(Integer brandId) {
+        this.brandId = brandId;
+    }
 
-	//set方法
-	public void setFreightId(Integer freightId) {
-		this.freightId = freightId;
-	}
-	//get方法
-	public String getImage() {
-		return image;
-	}
+    public Integer getCategory1Id() {
+        return category1Id;
+    }
 
-	//set方法
-	public void setImage(String image) {
-		this.image = image;
-	}
-	//get方法
-	public String getImages() {
-		return images;
-	}
+    public void setCategory1Id(Integer category1Id) {
+        this.category1Id = category1Id;
+    }
 
-	//set方法
-	public void setImages(String images) {
-		this.images = images;
-	}
-	//get方法
-	public String getSaleService() {
-		return saleService;
-	}
+    public Integer getCategory2Id() {
+        return category2Id;
+    }
 
-	//set方法
-	public void setSaleService(String saleService) {
-		this.saleService = saleService;
-	}
-	//get方法
-	public String getIntroduction() {
-		return introduction;
-	}
+    public void setCategory2Id(Integer category2Id) {
+        this.category2Id = category2Id;
+    }
 
-	//set方法
-	public void setIntroduction(String introduction) {
-		this.introduction = introduction;
-	}
-	//get方法
-	public String getSpecItems() {
-		return specItems;
-	}
+    public Integer getCategory3Id() {
+        return category3Id;
+    }
 
-	//set方法
-	public void setSpecItems(String specItems) {
-		this.specItems = specItems;
-	}
-	//get方法
-	public String getParaItems() {
-		return paraItems;
-	}
+    public void setCategory3Id(Integer category3Id) {
+        this.category3Id = category3Id;
+    }
 
-	//set方法
-	public void setParaItems(String paraItems) {
-		this.paraItems = paraItems;
-	}
-	//get方法
-	public Integer getSaleNum() {
-		return saleNum;
-	}
+    public Integer getTemplateId() {
+        return templateId;
+    }
 
-	//set方法
-	public void setSaleNum(Integer saleNum) {
-		this.saleNum = saleNum;
-	}
-	//get方法
-	public Integer getCommentNum() {
-		return commentNum;
-	}
+    public void setTemplateId(Integer templateId) {
+        this.templateId = templateId;
+    }
 
-	//set方法
-	public void setCommentNum(Integer commentNum) {
-		this.commentNum = commentNum;
-	}
-	//get方法
-	public String getIsMarketable() {
-		return isMarketable;
-	}
+    public Integer getFreightId() {
+        return freightId;
+    }
 
-	//set方法
-	public void setIsMarketable(String isMarketable) {
-		this.isMarketable = isMarketable;
-	}
-	//get方法
-	public String getIsEnableSpec() {
-		return isEnableSpec;
-	}
+    public void setFreightId(Integer freightId) {
+        this.freightId = freightId;
+    }
 
-	//set方法
-	public void setIsEnableSpec(String isEnableSpec) {
-		this.isEnableSpec = isEnableSpec;
-	}
-	//get方法
-	public String getIsDelete() {
-		return isDelete;
-	}
+    public String getImage() {
+        return image;
+    }
 
-	//set方法
-	public void setIsDelete(String isDelete) {
-		this.isDelete = isDelete;
-	}
-	//get方法
-	public String getStatus() {
-		return status;
-	}
+    public void setImage(String image) {
+        this.image = image;
+    }
 
-	//set方法
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public String getImages() {
+        return images;
+    }
 
+    public void setImages(String images) {
+        this.images = images;
+    }
+
+    public String getSaleService() {
+        return saleService;
+    }
+
+    public void setSaleService(String saleService) {
+        this.saleService = saleService;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+
+    public String getSpecItems() {
+        return specItems;
+    }
+
+    public void setSpecItems(String specItems) {
+        this.specItems = specItems;
+    }
+
+    public String getParaItems() {
+        return paraItems;
+    }
+
+    public void setParaItems(String paraItems) {
+        this.paraItems = paraItems;
+    }
+
+    public Integer getSaleNum() {
+        return saleNum;
+    }
+
+    public void setSaleNum(Integer saleNum) {
+        this.saleNum = saleNum;
+    }
+
+    public Integer getCommentNum() {
+        return commentNum;
+    }
+
+    public void setCommentNum(Integer commentNum) {
+        this.commentNum = commentNum;
+    }
+
+    public String getIsMarketable() {
+        return isMarketable;
+    }
+
+    public void setIsMarketable(String isMarketable) {
+        this.isMarketable = isMarketable;
+    }
+
+    public String getIsEnableSpec() {
+        return isEnableSpec;
+    }
+
+    public void setIsEnableSpec(String isEnableSpec) {
+        this.isEnableSpec = isEnableSpec;
+    }
+
+    public String getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(String isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 }

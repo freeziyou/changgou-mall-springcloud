@@ -5,10 +5,9 @@ import java.io.Serializable;
 
 /**
  * @author Dylan Guo
- * @date 9/16/2020 12:51
+ * @date 9/17/2020 22:14
  * @description TODO
  */
-
 @Table(name = "tb_album")
 public class Album implements Serializable {
 
@@ -37,6 +36,7 @@ public class Album implements Serializable {
      */
     @Column(name = "image_items")
     private String imageItems;
+
 
     public Long getId() {
         return id;

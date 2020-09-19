@@ -1,25 +1,19 @@
 package com.changgou.goods.pojo;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * @author Dylan Guo
- * @date 9/16/2020 12:51
+ * @date 9/17/2020 22:14
  * @description TODO
  */
-
-@ApiModel(description = "Template", value = "Template")
 @Table(name = "tb_template")
 public class Template implements Serializable {
 
     /**
      * ID
      */
-    @ApiModelProperty(value = "ID", required = false)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -28,23 +22,21 @@ public class Template implements Serializable {
     /**
      * 模板名称
      */
-    @ApiModelProperty(value = "模板名称", required = false)
     @Column(name = "name")
     private String name;
 
     /**
      * 规格数量
      */
-    @ApiModelProperty(value = "规格数量", required = false)
     @Column(name = "spec_num")
     private Integer specNum;
 
     /**
      * 参数数量
      */
-    @ApiModelProperty(value = "参数数量", required = false)
     @Column(name = "para_num")
     private Integer paraNum;
+
 
     public Integer getId() {
         return id;
@@ -77,4 +69,5 @@ public class Template implements Serializable {
     public void setParaNum(Integer paraNum) {
         this.paraNum = paraNum;
     }
+
 }

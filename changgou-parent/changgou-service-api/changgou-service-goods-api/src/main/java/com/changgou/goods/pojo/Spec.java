@@ -1,8 +1,5 @@
 package com.changgou.goods.pojo;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,14 +8,12 @@ import java.io.Serializable;
  * @date 9/17/2020 22:14
  * @description TODO
  */
-@ApiModel(description = "Spec", value = "Spec")
 @Table(name = "tb_spec")
 public class Spec implements Serializable {
 
     /**
      * ID
      */
-    @ApiModelProperty(value = "ID", required = false)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -27,28 +22,24 @@ public class Spec implements Serializable {
     /**
      * 名称
      */
-    @ApiModelProperty(value = "名称", required = false)
     @Column(name = "name")
     private String name;
 
     /**
      * 规格选项
      */
-    @ApiModelProperty(value = "规格选项", required = false)
     @Column(name = "options")
     private String options;
 
     /**
      * 排序
      */
-    @ApiModelProperty(value = "排序", required = false)
     @Column(name = "seq")
     private Integer seq;
 
     /**
      * 模板ID
      */
-    @ApiModelProperty(value = "模板ID", required = false)
     @Column(name = "template_id")
     private Integer templateId;
 
@@ -92,4 +83,5 @@ public class Spec implements Serializable {
     public void setTemplateId(Integer templateId) {
         this.templateId = templateId;
     }
+
 }

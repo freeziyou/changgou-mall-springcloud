@@ -1,18 +1,23 @@
 package com.changgou.goods.pojo;
 
-import io.swagger.annotations.ApiModel;
-
 import java.io.Serializable;
 import java.util.List;
 
 /**
- * 商品组合实体类
+ * @author Dylan Guo
+ * @date 9/19/2020 13:54
+ * @description TODO
  */
-@ApiModel(description = "商品信息")
 public class Goods implements Serializable {
-    //SPU
+
+    /**
+     * SPU
+     */
     private Spu spu;
-    //SKU集合
+
+    /**
+     * SKU 集合
+     */
     private List<Sku> skuList;
 
     public Spu getSpu() {
@@ -29,5 +34,13 @@ public class Goods implements Serializable {
 
     public void setSkuList(List<Sku> skuList) {
         this.skuList = skuList;
+    }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "spu=" + spu +
+                ", skuList=" + skuList +
+                '}';
     }
 }

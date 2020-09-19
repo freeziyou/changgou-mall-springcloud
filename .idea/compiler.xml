@@ -27,7 +27,7 @@
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
-      <module name="code-template" target="1.5" />
+      <module name="code-template" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -8,11 +8,11 @@ import java.io.Serializable;
 <#list typeSet as set>
 import ${set};
 </#list>
-/****
- * @Author:admin
- * @Description:${Table}构建
- * @Date 2019/6/14 19:13
- *****/
+/**
+ * @author Dylan Guo
+ * @date 9/17/2020 22:14
+ * @description TODO
+ */
 <#if swagger==true>
 @ApiModel(description = "${Table}",value = "${Table}")
 </#if>
@@ -20,6 +20,9 @@ import ${set};
 public class ${Table} implements Serializable{
 
 <#list models as model>
+	/**
+	 * ${model.desc!""}
+	 */
 	<#if swagger==true>
 	@ApiModelProperty(value = "${model.desc!""}",required = false)
 	</#if>
@@ -30,22 +33,19 @@ public class ${Table} implements Serializable{
 	</#if>
 	</#if>
     @Column(name = "${model.column}")
-	private ${model.simpleType} ${model.name};//${model.desc!""}
+	private ${model.simpleType} ${model.name};
 
 </#list>
 
 
 <#list models as model>
-	//get方法
 	public ${model.simpleType} get${model.upperName}() {
 		return ${model.name};
 	}
 
-	//set方法
 	public void set${model.upperName}(${model.simpleType} ${model.name}) {
 		this.${model.name} = ${model.name};
 	}
+
 </#list>
-
-
 }
