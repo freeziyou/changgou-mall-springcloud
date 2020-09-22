@@ -1,0 +1,29 @@
+server:
+  port: 18085
+spring:
+  application:
+    name: search
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 192.168.211.132:9300
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+# Feign 请求读取数据超时时间
+ribbon:
+  ReadTimeout: 300000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

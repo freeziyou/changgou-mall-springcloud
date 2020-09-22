@@ -13,6 +13,11 @@ import java.util.List;
 public interface SkuService {
 
     /**
+     * 根据状态查询SKU列表
+     */
+    List<Sku> findByStatus(String status);
+
+    /**
      * Sku 多条件分页查询
      *
      * @param sku

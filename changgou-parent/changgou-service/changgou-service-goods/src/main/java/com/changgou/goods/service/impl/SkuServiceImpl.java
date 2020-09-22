@@ -24,6 +24,19 @@ public class SkuServiceImpl implements SkuService {
     private SkuMapper skuMapper;
 
     /**
+     * 根据状态查询 SKU 列表
+     *
+     * @param status
+     * @return
+     */
+    @Override
+    public List<Sku> findByStatus(String status) {
+        Sku sku = new Sku();
+        sku.setStatus(status);
+        return skuMapper.select(sku);
+    }
+
+    /**
      * Sku 条件分页查询
      *
      * @param sku  查询条件

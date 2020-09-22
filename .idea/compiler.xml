@@ -15,6 +15,7 @@
         <module name="changgou-service-content" />
         <module name="changgou-common-db" />
         <module name="code-template" />
+        <module name="changgou-service-search" />
         <module name="changgou-common" />
         <module name="changgou-service-file" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="changgou-service-file" target="1.8" />
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
+      <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
       <module name="code-template" target="1.5" />
@@ -53,6 +55,7 @@
       <module name="changgou-service-file" options="-parameters" />
       <module name="changgou-service-goods" options="-parameters" />
       <module name="changgou-service-goods-api" options="-parameters" />
+      <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
       <module name="changgou-web" options="-parameters" />
     </option>
