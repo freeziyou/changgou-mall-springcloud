@@ -1,6 +1,6 @@
 
 
-## 第四天 lua、Nginx、Canal 实现广告缓存
+## Day 4：lua、Nginx、Canal 实现广告缓存
 
 #### 广告缓存读取
 
