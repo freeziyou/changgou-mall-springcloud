@@ -10,9 +10,13 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-parent.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-canal/changgou-service-canal.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-canal/changgou-service-canal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-content/changgou-service-content.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-content/changgou-service-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-content-api/changgou-service-content-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-content-api/changgou-service-content-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/changgou-service-file.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/changgou-service-file.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/changgou-service-goods.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/changgou-service-goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/changgou-service-goods-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/code-template/code-template.iml" filepath="$PROJECT_DIR$/code-template/code-template.iml" />
     </modules>

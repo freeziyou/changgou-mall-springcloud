@@ -1,0 +1,1088 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "微服务工程代码生成器,生成Dao、Service、Controller、Pojo、Feign、Swagger的JSON脚本",
+    "version": "1.0.0",
+    "title": "深圳黑马训练营代码生成器",
+    "termsOfService": "https://github.com/shenkunlin/code-template.git",
+    "contact": {
+      "email": "shenkunlin@itcast.cn"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
+  "tags": [
+        {
+      "name": "ContentController",
+      "description": "ContentController"
+    },
+    {
+      "name": "ContentController",
+      "description": "ContentController"
+    },
+    {
+      "name": "ContentController",
+      "description": "ContentController"
+    },
+    {
+      "name": "ContentController",
+      "description": "ContentController"
+    },
+    {
+      "name": "ContentCategoryController",
+      "description": "ContentCategoryController"
+    },
+    {
+      "name": "ContentCategoryController",
+      "description": "ContentCategoryController"
+    },
+    {
+      "name": "ContentCategoryController",
+      "description": "ContentCategoryController"
+    },
+    {
+      "name": "ContentCategoryController",
+      "description": "ContentCategoryController"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/content": {
+      "get": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "查询所有Content",
+        "description": "查询所有Content方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«Content»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "添加Content",
+        "description": "添加Content方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加Content方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/Content"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/content/{id}": {
+      "delete": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "根据ID删除Content",
+        "description": "根据ID删除Content方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除Content方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "根据ID修改Content",
+        "description": "根据ID修改Content方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改Content方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Content",
+            "description": "传入Content的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Content"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "根据ID查询Content",
+        "description": "根据ID查询Content方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改Content方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«Content»"
+            }
+          }
+        }
+      }
+    },
+    "/content/search": {
+      "post": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "不带分页条件搜索Content",
+        "description": "不带分页条件搜索Content方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Content",
+            "description": "传入Content的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Content"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«Content»»"
+            }
+          }
+        }
+      }
+    },
+    "/content/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "分页列表查询Content",
+        "description": "分页列表查询Content方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«Content»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ContentController"
+        ],
+        "summary": "分页条件搜索Content",
+        "description": "分页条件搜索Content方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Content",
+            "description": "传入Content的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Content"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索Content"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«Content»»"
+            }
+          }
+        }
+      }
+    },
+    "/contentCategory": {
+      "get": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "查询所有ContentCategory",
+        "description": "查询所有ContentCategory方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«ContentCategory»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "添加ContentCategory",
+        "description": "添加ContentCategory方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加ContentCategory方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/ContentCategory"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/contentCategory/{id}": {
+      "delete": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "根据ID删除ContentCategory",
+        "description": "根据ID删除ContentCategory方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除ContentCategory方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "根据ID修改ContentCategory",
+        "description": "根据ID修改ContentCategory方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改ContentCategory方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "ContentCategory",
+            "description": "传入ContentCategory的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/ContentCategory"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "根据ID查询ContentCategory",
+        "description": "根据ID查询ContentCategory方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改ContentCategory方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«ContentCategory»"
+            }
+          }
+        }
+      }
+    },
+    "/contentCategory/search": {
+      "post": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "不带分页条件搜索ContentCategory",
+        "description": "不带分页条件搜索ContentCategory方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "ContentCategory",
+            "description": "传入ContentCategory的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/ContentCategory"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«ContentCategory»»"
+            }
+          }
+        }
+      }
+    },
+    "/contentCategory/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "分页列表查询ContentCategory",
+        "description": "分页列表查询ContentCategory方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«ContentCategory»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ContentCategoryController"
+        ],
+        "summary": "分页条件搜索ContentCategory",
+        "description": "分页条件搜索ContentCategory方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "ContentCategory",
+            "description": "传入ContentCategory的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/ContentCategory"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索ContentCategory"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«ContentCategory»»"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Result": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "object",
+          "description": "逻辑数据"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«List«Content»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/Content"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«Content»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/Content"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long",
+          "description": ""
+        },
+        "categoryId": {
+          "type": "long",
+          "description": "内容类目ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "内容标题"
+        },
+        "url": {
+          "type": "string",
+          "description": "链接"
+        },
+        "pic": {
+          "type": "string",
+          "description": "图片绝对路径"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态,0无效，1有效"
+        },
+        "sortOrder": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        }
+      },
+      "description": "Content"
+    },
+    "Result«List«ContentCategory»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/ContentCategory"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«ContentCategory»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/ContentCategory"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "ContentCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "long",
+          "description": "类目ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "分类名称"
+        }
+      },
+      "description": "ContentCategory"
+    }
+  },
+  "externalDocs": {
+    "description": "黑马训练营畅购微服务商城(http://www.itheima.com)",
+    "url": "https://github.com/shenkunlin/code-template.git"
+  }
+}

@@ -1,0 +1,34 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: canal
+  redis:
+    host: 192.168.211.132
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+#hystrix 配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果enabled设置为false，则请求超时交给ribbon控制
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+#canal配置
+canal:
+  client:
+    instances:
+      example:
+        host: 192.168.211.132
+        port: 11111

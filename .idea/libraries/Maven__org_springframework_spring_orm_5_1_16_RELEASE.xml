@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework:spring-orm:5.1.16.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../JavaTools/apache-maven-3.6.3/repository/org/springframework/spring-orm/5.1.16.RELEASE/spring-orm-5.1.16.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../JavaTools/apache-maven-3.6.3/repository/org/springframework/spring-orm/5.1.16.RELEASE/spring-orm-5.1.16.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../JavaTools/apache-maven-3.6.3/repository/org/springframework/spring-orm/5.1.16.RELEASE/spring-orm-5.1.16.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -20,6 +20,7 @@
         <module>changgou-service-goods-api</module>
         <module>changgou-service-goods-api</module>
         <module>changgou-service-goods</module>
+        <module>changgou-service-search-api</module>
     </modules>
 
     <parent>

@@ -1,0 +1,34 @@
+server:
+  port: 18084
+spring:
+  application:
+    name: content
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/changgou_content?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  configuration:
+    #开启驼峰功能
+    map-underscore-to-camel-case: true
+
+#hystrix 配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果 enabled 设置为 false，则请求超时交给 ribbon 控制
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
