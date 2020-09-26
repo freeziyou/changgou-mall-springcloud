@@ -1,0 +1,18 @@
+server:
+  port: 18086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: search-web
+  main:
+    allow-bean-definition-overriding: true
