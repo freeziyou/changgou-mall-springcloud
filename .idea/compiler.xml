@@ -10,6 +10,7 @@
         <module name="changgou-eureka" />
         <module name="changgou-web-search" />
         <module name="changgou-service-content" />
+        <module name="changgou-web-item-api" />
         <module name="changgou-service-search" />
         <module name="changgou-common" />
         <module name="changgou-service-file" />
@@ -19,6 +20,7 @@
         <module name="changgou-service-content-api" />
         <module name="changgou-common-db" />
         <module name="code-template" />
+        <module name="changgou-web-item" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13">
@@ -38,6 +40,8 @@
       <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
+      <module name="changgou-web-item" target="1.8" />
+      <module name="changgou-web-item-api" target="1.8" />
       <module name="changgou-web-search" target="9" />
       <module name="code-template" target="1.5" />
     </bytecodeTargetLevel>
@@ -60,6 +64,8 @@
       <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
       <module name="changgou-web" options="-parameters" />
+      <module name="changgou-web-item" options="-parameters" />
+      <module name="changgou-web-item-api" options="-parameters" />
       <module name="changgou-web-search" options="-parameters" />
     </option>
   </component>

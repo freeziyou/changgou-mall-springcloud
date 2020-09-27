@@ -3,9 +3,7 @@ package com.changgou.goods.feign;
 import com.changgou.goods.pojo.Sku;
 import entity.Result;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +16,21 @@ import java.util.List;
 @RequestMapping("/sku")
 public interface SkuFeign {
 
+    /**
+     * 查询符合条件状态的 SKU 的列表
+     *
+     * @param status
+     * @return
+     */
     @GetMapping("/status/{status}")
     Result<List<Sku>> findByStatus(@PathVariable String status);
+
+    /**
+     * 根据条件搜索
+     *
+     * @param sku
+     * @return
+     */
+    @PostMapping("/search")
+    public Result<List<Sku>> findList(@RequestBody(required = false) Sku sku);
 }

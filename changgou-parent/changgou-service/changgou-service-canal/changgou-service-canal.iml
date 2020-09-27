@@ -181,6 +181,7 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.12" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="module" module-name="changgou-web-item-api" />
     <orderEntry type="module" module-name="changgou-common-db" />
     <orderEntry type="library" name="Maven: tk.mybatis:mapper-spring-boot-starter:2.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.15.RELEASE" level="project" />
