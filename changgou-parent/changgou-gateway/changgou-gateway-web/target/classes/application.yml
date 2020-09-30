@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: gateway-web
+  #Redis配置
+  redis:
+    host: 192.168.211.132
+    port: 6379
+
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedMethods: # 支持的方法
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        # 唯一标识符
+        - id: changgou_goods_route
+          # 用户请求需要路由到该服务
+          # uri: http://localhost:18081
+          # lb：使用 LoadBalanceClient 实现负载均衡，后面 goods 是微服务名称（主要用于集群环境）
+          uri: lb://goods
+          # 路由断言，路由规则配置
+          predicates:
+            # 用户请求的域名规则配置，所有 cloud.itheima.com 的请求都将被路由到 http://localhost:18081
+            # - Host=cloud.itheima.com**
+            # 所有以 /api/brand 的请求，都被路由 http://localhost:18081 微服务
+            # - Path=/api/brand/**
+            - Path=/api/goods/**
+            # 希望该路径由微服务网关自动添加上 /api 前缀
+          filters:
+            # 将请求路径中的第一个路径去掉，请求路径以 / 区分，
+            - StripPrefix=1
+            # 用户请求 /**->/brand/**, 并且将请求路由到 http://localhost:18081 微服务
+            #            - PrefixPath=/brand
+            # 请求数限流, 名字不能随便写, 使用默认的 factory
+            - name: RequestRateLimiter
+              args:
+                # 用户身份唯一识别标识符
+                key-resolver: "#{@ipKeyResolver}"
+                # 每秒钟只允许有 1 个请求
+                redis-rate-limiter.replenishRate: 1
+                # 允许并发有 4 个请求[宽限的个数]
+                redis-rate-limiter.burstCapacity: 4
+        - id: changgou_user_route
+          uri: lb://user
+          predicates:
+            - Path=/api/address/**, /api/areas/**, /api/cities/**, /api/provinces/**, /api/user/**
+          filters:
+            - StripPrefix=1
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    web:
+      exposure:
+        include: true

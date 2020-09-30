@@ -16,11 +16,14 @@
         <module name="changgou-service-file" />
         <module name="changgou-service-goods" />
         <module name="changgou-service-goods-api" />
+        <module name="changgou-service-user" />
         <module name="changgou-service-canal" />
         <module name="changgou-service-content-api" />
+        <module name="changgou-service-user-api" />
         <module name="changgou-common-db" />
         <module name="code-template" />
         <module name="changgou-web-item" />
+        <module name="changgou-gateway-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13">
@@ -28,6 +31,7 @@
       <module name="changgou-common-db" target="1.8" />
       <module name="changgou-eureka" target="1.8" />
       <module name="changgou-gateway" target="1.8" />
+      <module name="changgou-gateway-web" target="1.8" />
       <module name="changgou-parent" target="1.8" />
       <module name="changgou-service" target="1.8" />
       <module name="changgou-service-api" target="1.8" />
@@ -39,6 +43,8 @@
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
+      <module name="changgou-service-user" target="1.8" />
+      <module name="changgou-service-user-api" target="1.8" />
       <module name="changgou-web" target="1.8" />
       <module name="changgou-web-item" target="1.8" />
       <module name="changgou-web-item-api" target="1.8" />
@@ -52,6 +58,7 @@
       <module name="changgou-common-db" options="-parameters" />
       <module name="changgou-eureka" options="-parameters" />
       <module name="changgou-gateway" options="-parameters" />
+      <module name="changgou-gateway-web" options="-parameters" />
       <module name="changgou-parent" options="-parameters" />
       <module name="changgou-service" options="-parameters" />
       <module name="changgou-service-api" options="-parameters" />
@@ -63,6 +70,8 @@
       <module name="changgou-service-goods-api" options="-parameters" />
       <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
+      <module name="changgou-service-user" options="-parameters" />
+      <module name="changgou-service-user-api" options="-parameters" />
       <module name="changgou-web" options="-parameters" />
       <module name="changgou-web-item" options="-parameters" />
       <module name="changgou-web-item-api" options="-parameters" />
