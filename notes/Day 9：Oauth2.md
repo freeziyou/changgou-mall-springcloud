@@ -8,7 +8,7 @@
 
 - ==SpringSecurity Oauth2.0入门==
 
-  ```
+  ```properties
   oauth2.0认证模式
   授权码授权模式
   密码授权模式
