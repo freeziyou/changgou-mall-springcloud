@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-search-api/changgou-service-search-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/changgou-service-user.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/changgou-service-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-user-api/changgou-service-user-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-user-api/changgou-service-user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-user-oauth/changgou-user-oauth.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/changgou-user-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web-item/changgou-web-item.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-web/changgou-web-item/changgou-web-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-web-item-api/changgou-web-item-api.iml" filepath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-web-item-api/changgou-web-item-api.iml" />

@@ -1,4 +1,4 @@
-## Day 7:  Thymeleaf、canal实现静态页
+# Day 7:  Thymeleaf、canal实现静态页
 
 - Thymeleaf
 
