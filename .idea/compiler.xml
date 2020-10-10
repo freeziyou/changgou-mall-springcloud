@@ -13,6 +13,7 @@
         <module name="changgou-service-content" />
         <module name="changgou-web-item-api" />
         <module name="changgou-service-search" />
+        <module name="changgou-service-order" />
         <module name="changgou-common" />
         <module name="changgou-service-file" />
         <module name="changgou-service-goods" />
@@ -25,6 +26,7 @@
         <module name="code-template" />
         <module name="changgou-web-item" />
         <module name="changgou-gateway-web" />
+        <module name="changgou-service-order-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13">
@@ -42,6 +44,8 @@
       <module name="changgou-service-file" target="1.8" />
       <module name="changgou-service-goods" target="1.8" />
       <module name="changgou-service-goods-api" target="1.8" />
+      <module name="changgou-service-order" target="1.8" />
+      <module name="changgou-service-order-api" target="1.8" />
       <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
       <module name="changgou-service-user" target="1.8" />
@@ -70,6 +74,8 @@
       <module name="changgou-service-file" options="-parameters" />
       <module name="changgou-service-goods" options="-parameters" />
       <module name="changgou-service-goods-api" options="-parameters" />
+      <module name="changgou-service-order" options="-parameters" />
+      <module name="changgou-service-order-api" options="-parameters" />
       <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
       <module name="changgou-service-user" options="-parameters" />

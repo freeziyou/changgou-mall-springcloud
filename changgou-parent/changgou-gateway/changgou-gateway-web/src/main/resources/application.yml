@@ -46,10 +46,16 @@ spring:
                 redis-rate-limiter.replenishRate: 1
                 # 允许并发有 4 个请求[宽限的个数]
                 redis-rate-limiter.burstCapacity: 4
+        - id: changgou_order_route
+          uri: lb://order
+          predicates:
+            - Path=/api/cart/**,/api/categoryReport/**,/api/orderConfig/**,/api/order/**,/api/orderItem/**,/api/orderLog/**,/api/preferential/**,/api/returnCause/**,/api/returnOrder/**,/api/returnOrderItem/**
+          filters:
+            - StripPrefix=1
         - id: changgou_user_route
           uri: lb://user
           predicates:
-            - Path=/api/address/**, /api/areas/**, /api/cities/**, /api/provinces/**, /api/user/**
+            - Path=/api/user/**,/api/address/**,/api/areas/**,/api/cities/**,/api/provinces/**
           filters:
             - StripPrefix=1
 server:

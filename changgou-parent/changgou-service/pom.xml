@@ -22,6 +22,7 @@
         <module>changgou-service-user</module>
         <module>changgou-service-user</module>
         <module>changgou-service-user</module>
+        <module>changgou-service-order</module>
     </modules>
 
     <!--依赖-->

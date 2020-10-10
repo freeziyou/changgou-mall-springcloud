@@ -70,18 +70,8 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("changgou")          //客户端id
-                .secret("changgou")                      //秘钥
-                .redirectUris("http://localhost")       //重定向地址
-                .accessTokenValiditySeconds(120)          //访问令牌有效期
-                .refreshTokenValiditySeconds(120)         //刷新令牌有效期
-                .authorizedGrantTypes(
-                        "authorization_code",          //根据授权码生成令牌
-                        "client_credentials",          //客户端认证
-                        "refresh_token",                //刷新令牌
-                        "password")                     //密码方式认证
-                .scopes("app");                         //客户端范围，名称自定义，必填
+        // 从数据库加载客户端信息
+        clients.jdbc(dataSource).clients(clientDetails());
     }
 
     /**
@@ -93,9 +83,9 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.accessTokenConverter(jwtAccessTokenConverter)
-                .authenticationManager(authenticationManager)//认证管理器
-                .tokenStore(tokenStore)                       //令牌存储
-                .userDetailsService(userDetailsService);     //用户信息service
+                .authenticationManager(authenticationManager)// 认证管理器
+                .tokenStore(tokenStore)                       // 令牌存储
+                .userDetailsService(userDetailsService);     // 用户信息service
     }
 
     /**
