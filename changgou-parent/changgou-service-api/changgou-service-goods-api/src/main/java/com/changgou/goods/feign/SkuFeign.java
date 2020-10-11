@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Dylan Guo
@@ -42,4 +43,13 @@ public interface SkuFeign {
      */
     @GetMapping("/{id}")
     public Result<Sku> findById(@PathVariable Long id);
+
+    /**
+     * 商品信息递减
+     *
+     * @param decrMap
+     * @return
+     */
+    @GetMapping("/decr/count")
+    public Result decrCount(@RequestParam Map<String, Integer> decrMap);
 }

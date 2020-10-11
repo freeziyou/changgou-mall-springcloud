@@ -4,6 +4,7 @@ import com.changgou.goods.pojo.Sku;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Dylan Guo
@@ -79,4 +80,10 @@ public interface SkuService {
      * @return
      */
     List<Sku> findAll();
+
+    /**
+     * 商品信息递减
+     * @param decrMap
+     */
+    void decrCount(Map<String, Integer> decrMap);
 }

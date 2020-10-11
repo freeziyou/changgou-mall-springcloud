@@ -23,11 +23,26 @@ public class AddressServiceImpl implements AddressService {
     @Autowired
     private AddressMapper addressMapper;
 
+
+    /**
+     * 根据用户登录名字查询用户收件地址列表信息
+     *
+     * @param username
+     * @return
+     */
+    @Override
+    public List<Address> list(String username) {
+        Address address = new Address();
+        address.setUsername(username);
+        return addressMapper.select(address);
+    }
+
     /**
      * Address 条件分页查询
+     *
      * @param address 查询条件
-     * @param page 页码
-     * @param size 页大小
+     * @param page    页码
+     * @param size    页大小
      * @return 分页结果
      */
     @Override
@@ -42,6 +57,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * Address 分页查询
+     *
      * @param page 页码
      * @param size 页大小
      * @return 分页结果
@@ -56,6 +72,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * Address 条件查询
+     *
      * @param address
      * @return
      */
@@ -70,13 +87,14 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * Address  构建查询对象
+     *
      * @param address
      * @return
      */
     public Example createExample(Address address) {
         Example example = new Example(Address.class);
         Example.Criteria criteria = example.createCriteria();
-        if (address != null){
+        if (address != null) {
             // 
             if (!StringUtils.isEmpty(address.getId())) {
                 criteria.andEqualTo("id", address.getId());
@@ -123,6 +141,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * 删除
+     *
      * @param id
      */
     @Override
@@ -132,6 +151,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * 修改 Address
+     *
      * @param address
      */
     @Override
@@ -141,6 +161,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * 增加 Address
+     *
      * @param address
      */
     @Override
@@ -150,6 +171,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * 根据 ID 查询 Address
+     *
      * @param id
      * @return
      */
@@ -160,6 +182,7 @@ public class AddressServiceImpl implements AddressService {
 
     /**
      * 查询 Address 全部数据
+     *
      * @return
      */
     @Override

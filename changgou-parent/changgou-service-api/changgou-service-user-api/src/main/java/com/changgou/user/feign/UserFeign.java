@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author Dylan Guo
@@ -17,7 +18,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface UserFeign {
 
     /**
+     * 添加用户积分
+     *
+     * @param points
+     * @return
+     */
+    @GetMapping("/points/add")
+    public Result addPoints(@RequestParam Integer points);
+
+    /**
      * 根据 ID 查询用户信息
+     *
      * @param id
      * @return
      */

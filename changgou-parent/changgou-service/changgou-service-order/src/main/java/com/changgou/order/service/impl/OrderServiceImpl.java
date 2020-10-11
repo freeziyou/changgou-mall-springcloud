@@ -1,16 +1,22 @@
 package com.changgou.order.service.impl;
 
+import com.changgou.goods.feign.SkuFeign;
+import com.changgou.order.dao.OrderItemMapper;
 import com.changgou.order.dao.OrderMapper;
 import com.changgou.order.pojo.Order;
+import com.changgou.order.pojo.OrderItem;
 import com.changgou.order.service.OrderService;
+import com.changgou.user.feign.UserFeign;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import entity.IdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Dylan Guo
@@ -22,6 +28,94 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private OrderMapper orderMapper;
+
+    @Autowired
+    private IdWorker idWorker;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Autowired
+    private OrderItemMapper orderItemMapper;
+
+    @Autowired
+    private SkuFeign skuFeign;
+
+    @Autowired
+    private UserFeign userFeign;
+
+    /**
+     * 增加 Order
+     *
+     * @param order
+     */
+    @Override
+    public void add(Order order) {
+        // 主键 ID
+        order.setId(String.valueOf(idWorker.nextId()));
+
+        // 获取订单明细->购物车集合，循环订单明细，每个商品的购买数量叠加
+        List<OrderItem> orderItems = new ArrayList<>();
+
+        // 获取勾选的商品 ID，需要下单的商品，将要下单的商品的ID信息从购物车中移除
+        for (Long skuId : order.getSkuIds()) {
+            orderItems.add((OrderItem) redisTemplate.boundHashOps("Cart_" + order.getUsername()).get(skuId));
+            redisTemplate.boundHashOps("Cart_" + order.getUsername()).delete(skuId);
+        }
+
+        int totalNum = 0;
+        int totalMoney = 0;
+
+        // 封装Map<Long, Integer> 封装递减数据
+        Map<String, Integer> decrMap = new HashMap<>();
+        for (OrderItem orderItem : orderItems) {
+            totalNum += orderItem.getNum();
+            totalMoney += orderItem.getMoney();
+
+            // 订单明细的 Id
+            orderItem.setId(String.valueOf(idWorker.nextId()));
+            // 订单明细所属的订单
+            orderItem.setOrderId(order.getId());
+            // 是否退货
+            orderItem.setIsReturn("0");
+
+            // 封装递减数据
+            decrMap.put(orderItem.getSkuId().toString(), orderItem.getNum());
+        }
+
+        // 订单购买商品总数量 = 每个商品总数量之和
+        order.setTotalNum(totalNum);
+        // 订单总金额
+        order.setTotalMoney(totalMoney);
+        // 实付金额
+        order.setPayMoney(totalMoney);
+
+        // 创建时间
+        order.setCreateTime(new Date());
+        // 修改时间
+        order.setUpdateTime(order.getCreateTime());
+        // 订单来源，1：web
+        order.setSourceType("1");
+        // 是否完成订单，0：未完成
+        order.setOrderStatus("0");
+        // 是否支付，0：未支付
+        order.setPayStatus("0");
+        // 是否删除, 0：未删除
+        order.setIsDelete("0");
+
+        // 添加订单信息
+        orderMapper.insertSelective(order);
+        // 循环添加订单明细信息
+        for (OrderItem orderItem : orderItems) {
+            orderItemMapper.insertSelective(orderItem);
+        }
+
+        // 库存递减
+        skuFeign.decrCount(decrMap);
+
+        // 添加用户积分活跃度
+        userFeign.addPoints(1);
+    }
 
     /**
      * Order 条件分页查询
@@ -211,16 +305,6 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void update(Order order) {
         orderMapper.updateByPrimaryKey(order);
-    }
-
-    /**
-     * 增加 Order
-     *
-     * @param order
-     */
-    @Override
-    public void add(Order order) {
-        orderMapper.insert(order);
     }
 
     /**

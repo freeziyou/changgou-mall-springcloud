@@ -5,6 +5,7 @@ import com.changgou.user.service.AddressService;
 import com.github.pagehelper.PageInfo;
 import entity.Result;
 import entity.StatusCode;
+import entity.TokenDecode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,10 +26,25 @@ public class AddressController {
     private AddressService addressService;
 
     /**
+     * 根据用户名查询用户收件地址列表
+     *
+     * @return
+     */
+    @GetMapping("/user/list")
+    public Result<List<Address>> list() {
+        // 获取用户登录名
+        String username = TokenDecode.getUserInfo().get("username");
+        // 查询用户的收件列表
+        List<Address> addresses = addressService.list(username);
+        return new Result<List<Address>>(true, StatusCode.OK, "查询成功!", addresses);
+    }
+
+    /**
      * Address 分页条件搜索实现
+     *
      * @param address
-     * @param page 当前页
-     * @param size 每页显示多少条
+     * @param page    当前页
+     * @param size    每页显示多少条
      * @return
      */
     @PostMapping("/search/{page}/{size}")
@@ -40,6 +56,7 @@ public class AddressController {
 
     /**
      * Address 分页搜索实现
+     *
      * @param page 当前页
      * @param size 每页显示多少条
      * @return
@@ -53,6 +70,7 @@ public class AddressController {
 
     /**
      * 多条件搜索品牌数据
+     *
      * @param address
      * @return
      */
@@ -65,6 +83,7 @@ public class AddressController {
 
     /**
      * 根据 ID 删除品牌数据
+     *
      * @param id
      * @return
      */
@@ -77,6 +96,7 @@ public class AddressController {
 
     /**
      * 修改 Address数据
+     *
      * @param address
      * @param id
      * @return
@@ -92,6 +112,7 @@ public class AddressController {
 
     /**
      * 新增 Address 数据
+     *
      * @param address
      * @return
      */
@@ -104,11 +125,12 @@ public class AddressController {
 
     /**
      * 根据 ID 查询 Address 数据
+     *
      * @param id
      * @return
      */
     @GetMapping("/{id}")
-    public Result<Address> findById(@PathVariable Integer id){
+    public Result<Address> findById(@PathVariable Integer id) {
         // 调用 AddressService 实现根据主键查询 Address
         Address address = addressService.findById(id);
         return new Result<Address>(true, StatusCode.OK, "ID 查询成功!", address);
@@ -116,12 +138,13 @@ public class AddressController {
 
     /**
      * 查询 Address 全部数据
+     *
      * @return
      */
     @GetMapping
     public Result<List<Address>> findAll() {
         // 调用 AddressService 实现查询所有 Address
         List<Address> list = addressService.findAll();
-        return new Result<List<Address>>(true, StatusCode.OK, "查询成功!", list) ;
+        return new Result<List<Address>>(true, StatusCode.OK, "查询成功!", list);
     }
 }

@@ -115,9 +115,7 @@ public class IdWorker {
     }
 
     /**
-     * <p>
      * 获取 maxWorkerId
-     * </p>
      */
     protected static long getMaxWorkerId(long datacenterId, long maxWorkerId) {
         StringBuffer mpid = new StringBuffer();
@@ -136,9 +134,7 @@ public class IdWorker {
     }
 
     /**
-     * <p>
      * 数据标识id部分
-     * </p>
      */
     protected static long getDatacenterId(long maxDatacenterId) {
         long id = 0L;

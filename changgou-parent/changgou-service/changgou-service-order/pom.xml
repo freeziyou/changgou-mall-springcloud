@@ -19,6 +19,11 @@
         </dependency>
         <dependency>
             <groupId>com.changgou</groupId>
+            <artifactId>changgou-service-user-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.changgou</groupId>
             <artifactId>changgou-service-goods-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
