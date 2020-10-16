@@ -73,8 +73,9 @@ public interface OrderService {
      * 新增 Order
      *
      * @param order
+     * @return
      */
-    void add(Order order);
+    Order add(Order order);
 
     /**
      * 根据 ID 查询 Order

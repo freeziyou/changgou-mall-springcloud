@@ -10,6 +10,14 @@ import java.util.Map;
 public interface WeixinPayService {
 
     /**
+     * 关闭支付
+     *
+     * @param orderId
+     * @return
+     */
+    Map<String, String> closePay(Long orderId) throws Exception;
+
+    /**
      * 查询微信支付状态
      *
      * @param outtradeno

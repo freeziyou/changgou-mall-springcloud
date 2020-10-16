@@ -42,6 +42,57 @@ public class WeixinPayServiceImpl implements WeixinPayService {
     private String notifyurl;
 
     /**
+     * 发送 http 请求，获取结果
+     *
+     * @param paramMap
+     * @param url
+     * @return
+     * @throws Exception
+     */
+    private Map<String, String> getHttpResult(Map<String, String> paramMap, String url) throws Exception {
+        // 将Map数据转成XML字符
+        String xmlParam = WXPayUtil.generateSignedXml(paramMap, partnerkey);
+
+        // 发送请求
+        HttpClient httpClient = new HttpClient(url);
+        // 提交参数
+//        httpClient.setHttps(true);
+        httpClient.setXmlParam(xmlParam);
+
+        // 提交
+        httpClient.post();
+
+        // 获取返回数据
+        String content = httpClient.getContent();
+
+        // 将返回数据解析成Map
+        Map<String, String> resultMap = WXPayUtil.xmlToMap(content);
+        return resultMap;
+    }
+
+    /**
+     * 关闭微信支付
+     *
+     * @param orderId
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public Map<String, String> closePay(Long orderId) throws Exception {
+        // 参数设置
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put("appid", appid);
+        paramMap.put("mch_id", partner);
+        paramMap.put("nonce_str", WXPayUtil.generateNonceStr());
+        paramMap.put("out_trade_no", String.valueOf(orderId));
+
+        // 确定url
+        String url = "https://api.mch.weixin.qq.com/pay/closeorder";
+
+        return getHttpResult(paramMap, url);
+    }
+
+    /**
      * 查询支付状态
      *
      * @param outtradeno
@@ -61,25 +112,10 @@ public class WeixinPayServiceImpl implements WeixinPayService {
             // 商户订单号
             paramMap.put("out_trade_no", outtradeno);
 
-            // Map 转成 xml 字符串, 可以携带签名
-            String xmlParameters = null;
-            xmlParameters = WXPayUtil.generateSignedXml(paramMap, partnerkey);
-
             // URL 地址
             String url = "https://api.mch.weixin.qq.com/pay/orderquery";
-            // 提交方式
-            HttpClient httpClient = new HttpClient(url);
-            // 提交参数
-            httpClient.setXmlParam(xmlParameters);
-            // 执行请求
-            httpClient.post();
 
-            // 获取返回的数据
-            String result = httpClient.getContent();
-
-            // 返回数据转成 Map
-            Map<String, String> resultMap = WXPayUtil.xmlToMap(result);
-            return resultMap;
+            return getHttpResult(paramMap, url);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -116,25 +152,10 @@ public class WeixinPayServiceImpl implements WeixinPayService {
             // 交易类型
             paramMap.put("trade_type", "NATIVE");
 
-            // Map 转成 xml 字符串, 可以携带签名
-            String xmlParameters = null;
-            xmlParameters = WXPayUtil.generateSignedXml(paramMap, partnerkey);
-
             // URL 地址
             String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
-            // 提交方式
-            HttpClient httpClient = new HttpClient(url);
-            // 提交参数
-            httpClient.setXmlParam(xmlParameters);
-            // 执行请求
-            httpClient.post();
 
-            // 获取返回的数据
-            String result = httpClient.getContent();
-
-            // 返回数据转成 Map
-            Map<String, String> resultMap = WXPayUtil.xmlToMap(result);
-            return resultMap;
+            return getHttpResult(paramMap, url);
         } catch (Exception e) {
             e.printStackTrace();
         }

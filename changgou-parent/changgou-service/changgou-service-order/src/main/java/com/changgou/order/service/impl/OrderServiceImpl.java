@@ -101,9 +101,10 @@ public class OrderServiceImpl implements OrderService {
      * 增加 Order
      *
      * @param order
+     * @return
      */
     @Override
-    public void add(Order order) {
+    public Order add(Order order) {
         // 主键 ID
         order.setId(String.valueOf(idWorker.nextId()));
 
@@ -169,6 +170,12 @@ public class OrderServiceImpl implements OrderService {
         // 添加用户积分活跃度
         userFeign.addPoints(1);
 
+        //线上支付，记录订单，存到redis中，避免每次访问数据库
+        if (order.getPayType().equalsIgnoreCase("1")) {
+            //将支付记录存入到Reids namespace  key  value
+            redisTemplate.boundHashOps("Order").put(order.getId(), order);
+        }
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("创建订单时间：" + simpleDateFormat.format(new Date()));
         // 添加订单
@@ -180,6 +187,8 @@ public class OrderServiceImpl implements OrderService {
                 return message;
             }
         });
+
+        return order;
     }
 
     /**

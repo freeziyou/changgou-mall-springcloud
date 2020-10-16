@@ -109,8 +109,8 @@ public class OrderController {
         order.setUsername(username);
 
         // 调用 OrderService 实现添加 Order
-        orderService.add(order);
-        return new Result(true, StatusCode.OK, "添加成功!");
+        order = orderService.add(order);
+        return new Result(true, StatusCode.OK, "添加成功!", order);
     }
 
     /**
