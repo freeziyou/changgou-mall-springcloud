@@ -1,7 +1,5 @@
 package com.changgou.filter;
 
-import com.changgou.util.JwtUtil;
-import io.jsonwebtoken.Claims;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -26,6 +24,11 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
      * 令牌 header 名字
      */
     private static final String AUTHORIZE_TOKEN = "Authorization";
+
+    /**
+     * 用户登录地址
+     */
+    private static final String USER_LOGIN_URL = "http://localhost:9001/oauth/login";
 
     /**
      * 全局拦截
@@ -67,22 +70,39 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         // 令牌为空，则允许访问，直接拦截
         if (StringUtils.isEmpty(token)) {
             // 设置没有权限的状态码 401
-            response.setStatusCode(HttpStatus.UNAUTHORIZED);
-            // 响应空数据
-            return response.setComplete();
-        } else {
-            if (!hasToken) {
-                // 判断当前令牌是否有 bearer 前缀，如果没有则添加
-                if (!token.startsWith("bearer ") && !token.startsWith("Bearer ")) {
-                    token = "bearer " + token;
-                }
-                // 将令牌封装到头文件中
-                request.mutate().header(AUTHORIZE_TOKEN, token);
-            }
+//            response.setStatusCode(HttpStatus.UNAUTHORIZED);
+//            // 响应空数据
+//            return response.setComplete();
+            return needAuthorization(USER_LOGIN_URL + "?FROM=" + request.getURI(), exchange);
         }
+//        else {
+//            if (!hasToken) {
+//                // 判断当前令牌是否有 bearer 前缀，如果没有则添加
+//                if (!token.startsWith("bearer ") && !token.startsWith("Bearer ")) {
+//                    token = "bearer " + token;
+//                }
+//                // 将令牌封装到头文件中
+//                request.mutate().header(AUTHORIZE_TOKEN, token);
+        request.mutate().header(AUTHORIZE_TOKEN, "Bearer " + token);
+//            }
+//        }
 
         // 有效则放行
         return chain.filter(exchange);
+    }
+
+    /**
+     * 响应设置
+     *
+     * @param url
+     * @param exchange
+     * @return
+     */
+    public Mono<Void> needAuthorization(String url, ServerWebExchange exchange) {
+        ServerHttpResponse response = exchange.getResponse();
+        response.setStatusCode(HttpStatus.SEE_OTHER);
+        response.getHeaders().set("Location", url);
+        return exchange.getResponse().setComplete();
     }
 
     /**

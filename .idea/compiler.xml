@@ -20,6 +20,7 @@
         <module name="changgou-service-goods-api" />
         <module name="changgou-service-user" />
         <module name="changgou-service-canal" />
+        <module name="changgou-service-pay" />
         <module name="changgou-service-content-api" />
         <module name="changgou-service-user-api" />
         <module name="changgou-common-db" />
@@ -46,6 +47,7 @@
       <module name="changgou-service-goods-api" target="1.8" />
       <module name="changgou-service-order" target="1.8" />
       <module name="changgou-service-order-api" target="1.8" />
+      <module name="changgou-service-pay" target="1.8" />
       <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
       <module name="changgou-service-user" target="1.8" />
@@ -76,6 +78,7 @@
       <module name="changgou-service-goods-api" options="-parameters" />
       <module name="changgou-service-order" options="-parameters" />
       <module name="changgou-service-order-api" options="-parameters" />
+      <module name="changgou-service-pay" options="-parameters" />
       <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
       <module name="changgou-service-user" options="-parameters" />

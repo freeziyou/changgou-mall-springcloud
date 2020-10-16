@@ -8,27 +8,312 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-common/src/main/java/entity/IdWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-common/src/main/java/entity/IdWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SkuFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SkuFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-order-api/src/main/java/com/changgou/order/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-order-api/src/main/java/com/changgou/order/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-user-api/src/main/java/com/changgou/user/feign/UserFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service-api/changgou-service-user-api/src/main/java/com/changgou/user/feign/UserFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/controller/SkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/dao/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/dao/SkuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/SkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/SkuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-goods/src/main/java/com/changgou/goods/service/impl/SkuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/mq/listener/DelayMessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/mq/listener/OrderMessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/mq/queue/QueueConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/WeixinPayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/controller/WeixinPayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/mq/MQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/service/WeixinPayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/service/impl/WeixinPayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/java/com/changgou/oauth/controller/LoginRedirect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-JD-index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-addressList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-cooperation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-getOrderInfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-login-manage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-myOrder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-mycomment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-pay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-payconfirm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-payfail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-paysuccess.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-sampling.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-seckill-index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-seckill-item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-seckillOrder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-shop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-shoplogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-success-cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-weixinpay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/pages-zoom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/widget-cartPanelView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/css/widget-jquery.autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/autocomplete.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/catalogSearch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/list-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/nav-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/orders.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productAlso.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productChoiceness.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productGuess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productInfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productList.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/productRelationship.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/shoplist-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/shoplist.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/data/success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-moon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-moon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-moon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-moon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-pc.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-pc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-pc.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-pc.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-tb.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-tb.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-tb.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-tb.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-touch.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-touch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-touch.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/fonts/icon-touch.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/Arrow_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/Arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/b2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/b3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/bg-who1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/buy001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/buy002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/buy01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/cooperation_banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/down-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/dp01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/dp02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/dp03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/dp04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/empty_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/erweima.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/gocart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/gocart01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/goods1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/gotop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/icon-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/intro01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/intro02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/intro03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/itemlike06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/l-m01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/list.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/login-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/manage-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/mobile06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/part01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/part02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/part03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/pay5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/phone14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/photo_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/s1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/s2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/s3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/sampling_head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/seckillbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/shi_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/shop-intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/shop-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/shop-part.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/title_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/_/y24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/account.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/ad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/ad1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/addimg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/ali.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/banner4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/barrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/bg0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/bg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/bg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/bg3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/brand_21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/cartPanelViewIcons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/choosed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/duihuan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/erweima.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-b01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-b02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/floor-1-b03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/goods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/interest06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/like_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/linker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/loginbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/mod-list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/paylogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/qq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/quan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/sina.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/today01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/today02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/today03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/today04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/weixin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/wx_cz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/img/zoom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/model/cartModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/addressList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/city-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/jquery.slideunlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/login-manage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/person-collect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/person-footmark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/seckill-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/shoplogin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/sm-city-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/pages/updateimg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/plugins/jquery.jqzoom/jquery.jqzoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/plugins/jquery.jqzoom/zoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/plugins/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/plugins/sui/sui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/static/js/widget/cartPanelView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-common/src/main/java/entity/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-common/src/main/java/entity/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-gateway/changgou-gateway-web/src/main/java/com/changgou/filter/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-gateway/changgou-gateway-web/src/main/java/com/changgou/filter/AuthorizeFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/changgou-service-order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/changgou-service-order.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/java/com/changgou/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/AddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/impl/AddressServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/Day 10：实现购物车.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/Day 10：实现购物车.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/changgou-user-oauth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/changgou-user-oauth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/java/com/changgou/oauth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/java/com/changgou/oauth/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/Day 11：实现订单.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/Day 11：实现订单.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +370,7 @@
     <property name="extractMethod.generateAnnotations" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="JavaSE-1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-search/src/main/java/com/changgou/search" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.18046875" />
@@ -98,12 +383,12 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-web\changgou-web-item\src\main\resources\templates" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-web\changgou-web-search\src\main\resources\templates" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\notes\images" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud" />
-      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-user-oauth\src\main\resources" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-order\src\main\resources" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-goods\src\main\resources" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-order\src\main\java\com\changgou\order" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service-api\changgou-service-order-api\src\main\java\com\changgou\order" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.changgou.order.config" />
@@ -112,37 +397,22 @@
       <recent name="com.changgou.order.interceptor" />
       <recent name="com.changgou.util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-order\src\main\resources" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-goods\src\main\resources" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-order\src\main\java\com\changgou\order" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service-api\changgou-service-order-api\src\main\java\com\changgou\order" />
-      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-service\changgou-service-user\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-web\changgou-web-item\src\main\resources\templates" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\changgou-parent\changgou-web\changgou-web-search\src\main\resources\templates" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud\notes\images" />
+      <recent name="D:\JavaProjects\changgou-mall-springcloud" />
+      <recent name="D:\JavaProjects\changgou\changgou-parent\changgou-service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GoodsApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.OrderApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="changgou-gateway-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.changgou.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.GatewayWebApplication" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,6 +465,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeixinPayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="changgou-service-pay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.changgou.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.WeixinPayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,18 +546,18 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.OrderApplication" />
-      <item itemvalue="Spring Boot.GatewayWebApplication" />
-      <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.OAuthApplication" />
       <item itemvalue="Spring Boot.GoodsApplication" />
+      <item itemvalue="Spring Boot.WeixinPayApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GoodsApplication" />
         <item itemvalue="Spring Boot.OrderApplication" />
-        <item itemvalue="Spring Boot.OAuthApplication" />
+        <item itemvalue="Spring Boot.WeixinPayApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
-        <item itemvalue="Spring Boot.GatewayWebApplication" />
+        <item itemvalue="Spring Boot.OAuthApplication" />
+        <item itemvalue="Spring Boot.GoodsApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +599,9 @@
       <workItem from="1602122682524" duration="6717000" />
       <workItem from="1602231361681" duration="3891000" />
       <workItem from="1602295441484" duration="23327000" />
-      <workItem from="1602381014564" duration="12128000" />
+      <workItem from="1602381014564" duration="15428000" />
+      <workItem from="1602489039183" duration="595000" />
+      <workItem from="1602810422287" duration="15423000" />
     </task>
     <servers />
   </component>
@@ -347,10 +632,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="725" y="340" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1602160784786" />
-    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1602405172000">
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1602832019924">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1602405172000" />
+    <state x="783" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1602832019924" />
     <state x="52" y="175" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602306501245">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -359,10 +644,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="702" y="281" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1602038376009" />
-    <state x="805" y="467" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602306809424">
+    <state x="713" y="467" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602833065854">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="805" y="467" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1602306809424" />
+    <state x="713" y="467" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1602833065854" />
     <state x="178" y="246" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602160803945">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -375,66 +660,66 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="752" y="236" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1600663268615" />
-    <state width="967" height="341" key="GridCell.Tab.0.bottom" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.0.bottom" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="341" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.0.center" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.0.center" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="341" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.0.left" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.0.left" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="341" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.0.right" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.0.right" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="341" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.1.bottom" timestamp="1602407397152">
+    <state width="1993" height="334" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.1.bottom" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="341" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397152" />
-    <state width="967" height="341" key="GridCell.Tab.1.center" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.1.center" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="341" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.1.left" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.1.left" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="341" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="967" height="341" key="GridCell.Tab.1.right" timestamp="1602407397151">
+    <state width="1993" height="334" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="334" key="GridCell.Tab.1.right" timestamp="1602835892181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="341" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602407397151" />
-    <state width="1993" height="359" key="GridCell.Tab.2.bottom" timestamp="1602346741544">
+    <state width="1993" height="334" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602835892181" />
+    <state width="1993" height="359" key="GridCell.Tab.2.bottom" timestamp="1602835789143">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="1993" height="359" key="GridCell.Tab.2.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602346741544" />
-    <state width="1993" height="359" key="GridCell.Tab.2.center" timestamp="1602346741544">
+    <state width="1993" height="359" key="GridCell.Tab.2.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602835789143" />
+    <state width="1993" height="359" key="GridCell.Tab.2.center" timestamp="1602835789143">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="1993" height="359" key="GridCell.Tab.2.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602346741544" />
-    <state width="1993" height="359" key="GridCell.Tab.2.left" timestamp="1602346741544">
+    <state width="1993" height="359" key="GridCell.Tab.2.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602835789143" />
+    <state width="1993" height="359" key="GridCell.Tab.2.left" timestamp="1602835789143">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="1993" height="359" key="GridCell.Tab.2.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602346741544" />
-    <state width="1993" height="359" key="GridCell.Tab.2.right" timestamp="1602346741544">
+    <state width="1993" height="359" key="GridCell.Tab.2.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602835789143" />
+    <state width="1993" height="359" key="GridCell.Tab.2.right" timestamp="1602835789143">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="1993" height="359" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602346741544" />
+    <state width="1993" height="359" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602835789143" />
     <state x="0" y="231" key="IDE.errors.dialog" timestamp="1600349611793">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -483,18 +768,18 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="142" y="198" width="911" height="722" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1601105145560" />
-    <state x="435" y="146" key="new project wizard" timestamp="1602306527658">
+    <state x="435" y="146" key="new project wizard" timestamp="1602811868851">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="435" y="146" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1602306527658" />
+    <state x="435" y="146" key="new project wizard/0.0.2048.1112@0.0.2048.1112" timestamp="1602811868851" />
     <state x="92" y="258" key="run.anything.popup" timestamp="1601456709185">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="92" y="258" key="run.anything.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1601456709185" />
-    <state x="401" y="49" width="840" height="1034" key="search.everywhere.popup" timestamp="1602405288372">
+    <state x="401" y="49" width="840" height="1034" key="search.everywhere.popup" timestamp="1602412815331">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="401" y="49" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1602405288372" />
+    <state x="401" y="49" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1602412815331" />
     <state x="481" y="164" key="spring file set editor" timestamp="1600227795307">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

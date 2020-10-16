@@ -17,8 +17,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Order(-1)
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    /***
-     * 忽略安全拦截的URL
+    /**
+     * 忽略安全拦截的 URL
+     *
      * @param web
      * @throws Exception
      */
@@ -26,11 +27,20 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers(
                 "/user/login",
+                "/css/**",
+                "/oauth/login",
+                "/login.html",
+                "/login",
+                "/data/**",
+                "/fonts/**",
+                "/img/**",
+                "/js/**",
                 "/user/logout");
     }
 
-    /***
+    /**
      * 创建授权管理认证对象
+     *
      * @return
      * @throws Exception
      */
@@ -46,8 +56,9 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         super.configure(auth);
     }
 
-    /***
-     * 采用BCryptPasswordEncoder对密码进行编码
+    /**
+     * 采用 BCryptPasswordEncoder 对密码进行编码
+     *
      * @return
      */
     @Bean
@@ -55,8 +66,7 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    /****
-     *
+    /**
      * @param http
      * @throws Exception
      */
@@ -71,5 +81,8 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated();       //其他请求都需要经过验证
 
+        http.formLogin().
+                loginPage("/oauth/login").
+                loginProcessingUrl("/user/login");
     }
 }

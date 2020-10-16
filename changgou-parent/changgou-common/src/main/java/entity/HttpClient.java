@@ -24,10 +24,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-/*****
- * @Author: www.itheima.com
- * @Description: entity
- ****/
+
 public class HttpClient {
     private String url;
     private Map<String, String> param;
@@ -90,7 +87,7 @@ public class HttpClient {
             for (String key : param.keySet()) {
                 if (isFirst) {
                     url.append("?");
-                }else {
+                } else {
                     url.append("&");
                 }
                 url.append(key).append("=").append(param.get(key));

@@ -13,6 +13,22 @@ import java.util.List;
 public interface OrderService {
 
     /**
+     * 删除订单
+     *
+     * @param outtradeno
+     */
+    void deleteOrder(String outtradeno);
+
+    /**
+     * 修改订单状态
+     *
+     * @param outtradeno
+     * @param paytime
+     * @param transactionid
+     */
+    void updateStatus(String outtradeno, String paytime, String transactionid) throws Exception;
+
+    /**
      * Order 多条件分页查询
      *
      * @param order
