@@ -20,6 +20,7 @@
         <module>changgou-web-item-api</module>
         <module>changgou-service-user-api</module>
         <module>changgou-service-order-api</module>
+        <module>changgou-service-seckill-api</module>
     </modules>
 
     <dependencies>

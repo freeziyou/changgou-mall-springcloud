@@ -18,6 +18,7 @@
         <module name="changgou-service-file" />
         <module name="changgou-service-goods" />
         <module name="changgou-service-goods-api" />
+        <module name="changgou-service-seckill-api" />
         <module name="changgou-service-user" />
         <module name="changgou-service-canal" />
         <module name="changgou-service-pay" />
@@ -25,6 +26,7 @@
         <module name="changgou-service-user-api" />
         <module name="changgou-common-db" />
         <module name="code-template" />
+        <module name="changgou-service-seckill" />
         <module name="changgou-web-item" />
         <module name="changgou-gateway-web" />
         <module name="changgou-service-order-api" />
@@ -50,6 +52,8 @@
       <module name="changgou-service-pay" target="1.8" />
       <module name="changgou-service-search" target="1.8" />
       <module name="changgou-service-search-api" target="1.8" />
+      <module name="changgou-service-seckill" target="1.8" />
+      <module name="changgou-service-seckill-api" target="1.8" />
       <module name="changgou-service-user" target="1.8" />
       <module name="changgou-service-user-api" target="1.8" />
       <module name="changgou-user-oauth" target="1.8" />
@@ -57,7 +61,7 @@
       <module name="changgou-web-item" target="1.8" />
       <module name="changgou-web-item-api" target="1.8" />
       <module name="changgou-web-search" target="9" />
-      <module name="code-template" target="1.5" />
+      <module name="code-template" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -81,6 +85,8 @@
       <module name="changgou-service-pay" options="-parameters" />
       <module name="changgou-service-search" options="-parameters" />
       <module name="changgou-service-search-api" options="-parameters" />
+      <module name="changgou-service-seckill" options="-parameters" />
+      <module name="changgou-service-seckill-api" options="-parameters" />
       <module name="changgou-service-user" options="-parameters" />
       <module name="changgou-service-user-api" options="-parameters" />
       <module name="changgou-user-oauth" options="-parameters" />
