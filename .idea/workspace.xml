@@ -7,24 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/mq/DelaySeckillMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/mq/QueueConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/mq/SeckillMessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/controller/WeixinPayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/controller/WeixinPayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/mq/MQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/mq/MQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/service/impl/WeixinPayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/java/com/changgou/pay/service/impl/WeixinPayServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-pay/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/changgou-service-seckill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/changgou-service-seckill.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/service/SeckillOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/service/SeckillOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/service/impl/SeckillOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/service/impl/SeckillOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/task/MultiThreadingCreateOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/task/MultiThreadingCreateOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/timer/SeckillGoodsPushTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/java/com/changgou/seckill/timer/SeckillGoodsPushTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-seckill/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-template/code-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code-template/code-template.iml" afterDir="false" />
-    </list>
+    <list default="true" id="835ea093-1ea0-4cf2-808e-74fa036a365f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +285,7 @@
       <workItem from="1602489039183" duration="595000" />
       <workItem from="1602810422287" duration="17556000" />
       <workItem from="1602897024318" duration="15621000" />
-      <workItem from="1602988179581" duration="12025000" />
+      <workItem from="1602988179581" duration="12169000" />
     </task>
     <servers />
   </component>
@@ -361,46 +344,46 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="752" y="236" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1600663268615" />
-    <state width="967" height="330" key="GridCell.Tab.0.bottom" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.0.bottom" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="330" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.0.center" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.0.center" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="330" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.0.left" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.0.left" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="330" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.0.right" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.0.right" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="330" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.1.bottom" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.1.bottom" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="330" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.1.center" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.1.center" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="330" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.1.left" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.1.left" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783142" />
-    <state width="967" height="330" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
-    <state width="967" height="330" key="GridCell.Tab.1.right" timestamp="1602992063593">
+    <state width="967" height="330" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
+    <state width="967" height="330" key="GridCell.Tab.1.right" timestamp="1603013857616">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="980" height="359" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601480783143" />
-    <state width="967" height="330" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1602992063593" />
+    <state width="967" height="330" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1603013857616" />
     <state width="1993" height="360" key="GridCell.Tab.2.bottom" timestamp="1602942851163">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
