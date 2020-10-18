@@ -29,7 +29,6 @@ hystrix:
           enabled: true
         isolation:
           strategy: SEMAPHORE
-
 #微信支付信息配置
 weixin:
   # 应用ID
@@ -40,13 +39,15 @@ weixin:
   partnerkey: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
   # 支付回调地址
   notifyurl: http://34b8620115.eicp.vip/weixin/pay/notify/url
-
 #位置支付交换机和队列
 mq:
   pay:
     exchange:
       order: exchange.order
+      seckillorder: exchange.seckillorder
     queue:
       order: queue.order
+      seckillorder: queue.seckillorder
     routing:
       key: queue.order
+      seckillkey: queue.seckillorder

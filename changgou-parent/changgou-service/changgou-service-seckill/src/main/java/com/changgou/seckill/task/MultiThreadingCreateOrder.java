@@ -1,14 +1,20 @@
 package com.changgou.seckill.task;
 
+import com.alibaba.fastjson.JSON;
 import com.changgou.seckill.dao.SeckillGoodsMapper;
 import com.changgou.seckill.pojo.SeckillGoods;
 import com.changgou.seckill.pojo.SeckillOrder;
 import entity.IdWorker;
 import entity.SeckillStatus;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -28,6 +34,9 @@ public class MultiThreadingCreateOrder {
     @Autowired
     private IdWorker idWorker;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
     public void createOrder() {
         try {
             System.out.println("等待一会再下单！");
@@ -35,7 +44,6 @@ public class MultiThreadingCreateOrder {
 
             // 从 redis 队列中获取用户排队信息
             SeckillStatus seckillStatus = (SeckillStatus) redisTemplate.boundListOps("SeckillOrderQueue").rightPop();
-
             if (seckillStatus == null) {
                 return;
             }
@@ -45,6 +53,13 @@ public class MultiThreadingCreateOrder {
             Long id = seckillStatus.getGoodsId();
             String username = seckillStatus.getUsername();
 
+            // 先到 SeckillGoodsCountList_ID 队列中获取商品信息，能获取则可下单
+            Object sgoods = redisTemplate.boundListOps("SeckillGoodsCountList_" + seckillStatus.getGoodsId()).rightPop();
+            // 如不能获取，则代表无库存，清理排队信息
+            if (sgoods == null) {
+                clearUserQueue(username);
+                return;
+            }
 
             // 查询秒杀商品
             String namespace = "SeckillGoods_" + time;
@@ -69,7 +84,14 @@ public class MultiThreadingCreateOrder {
 
             // 库存递减
             seckillGoods.setStockCount(seckillGoods.getStockCount() - 1);
-            if (seckillGoods.getStockCount() <= 0) {
+            Thread.sleep(10000);
+            // 获取商品对应的队列数量
+            Long size = redisTemplate.boundListOps("SeckillGoodsCountList_" + seckillStatus.getGoodsId()).size();
+
+
+            if (size <= 0) {
+                // 同步数量
+                seckillGoods.setStockCount(size.intValue());
                 // 同步数据到 mysql
                 seckillGoodsMapper.updateByPrimaryKeySelective(seckillGoods);
                 // 删除 redis 中的数据
@@ -85,9 +107,33 @@ public class MultiThreadingCreateOrder {
             seckillStatus.setStatus(2);
             redisTemplate.boundHashOps("UserQueueStatus").put(username, seckillStatus);
 
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+            System.out.println("下单时间："+ simpleDateFormat.format(new Date()));
+
+            // 发送消息给延时队列
+            rabbitTemplate.convertAndSend("delaySeckillQueue", (Object) JSON.toJSONString(seckillStatus), new MessagePostProcessor() {
+                @Override
+                public Message postProcessMessage(Message message) throws AmqpException {
+                    message.getMessageProperties().setExpiration("10000");
+                    return message;
+                }
+            });
+
             System.out.println("下单成功！");
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 清理用户排队抢单信息
+     *
+     * @param username
+     */
+    public void clearUserQueue(String username) {
+        // 排队标识
+        redisTemplate.boundHashOps("UserQueueCount").delete(username);
+        // 排队信息清理
+        redisTemplate.boundHashOps("UserQueueStatus").delete(username);
     }
 }

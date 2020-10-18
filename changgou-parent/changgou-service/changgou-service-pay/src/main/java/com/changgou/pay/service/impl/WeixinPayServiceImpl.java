@@ -1,10 +1,12 @@
 package com.changgou.pay.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.changgou.pay.service.WeixinPayService;
 import com.github.wxpay.sdk.WXPayUtil;
 import entity.HttpClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,19 +54,14 @@ public class WeixinPayServiceImpl implements WeixinPayService {
     private Map<String, String> getHttpResult(Map<String, String> paramMap, String url) throws Exception {
         // 将Map数据转成XML字符
         String xmlParam = WXPayUtil.generateSignedXml(paramMap, partnerkey);
-
         // 发送请求
         HttpClient httpClient = new HttpClient(url);
         // 提交参数
-//        httpClient.setHttps(true);
         httpClient.setXmlParam(xmlParam);
-
         // 提交
         httpClient.post();
-
         // 获取返回数据
         String content = httpClient.getContent();
-
         // 将返回数据解析成Map
         Map<String, String> resultMap = WXPayUtil.xmlToMap(content);
         return resultMap;
@@ -151,6 +148,20 @@ public class WeixinPayServiceImpl implements WeixinPayService {
             paramMap.put("notify_url", notifyurl);
             // 交易类型
             paramMap.put("trade_type", "NATIVE");
+
+            // 获取自定义数据，传递用于区分秒杀/普通订单的识别队列信息
+            String exchange = parameterMap.get("exchange");
+            String routingKey = parameterMap.get("routingKey");
+            Map<String, String> attachMap = new HashMap<>();
+            attachMap.put("exchange",exchange);
+            attachMap.put("routingKey",routingKey);
+            // 如果是秒杀订单，需要传username
+            String username = parameterMap.get("username");
+            if (!StringUtils.isEmpty(username)) {
+                attachMap.put("username", username);
+            }
+            String attach = JSON.toJSONString(attachMap);
+            paramMap.put("attach", attach);
 
             // URL 地址
             String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";

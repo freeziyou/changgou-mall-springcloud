@@ -14,6 +14,22 @@ import java.util.List;
 public interface SeckillOrderService {
 
     /**
+     * 删除订单
+     *
+     * @param username
+     */
+    void deleteOrder(String username);
+
+    /**
+     * 修改订单状态
+     *
+     * @param username
+     * @param transactionid
+     * @param endtime
+     */
+    void updatePayStatus(String username, String transactionid, String endtime);
+
+    /**
      * 状态查询
      *
      * @param username

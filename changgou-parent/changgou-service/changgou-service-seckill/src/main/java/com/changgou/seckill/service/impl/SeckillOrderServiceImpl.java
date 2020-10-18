@@ -1,6 +1,8 @@
 package com.changgou.seckill.service.impl;
 
+import com.changgou.seckill.dao.SeckillGoodsMapper;
 import com.changgou.seckill.dao.SeckillOrderMapper;
+import com.changgou.seckill.pojo.SeckillGoods;
 import com.changgou.seckill.pojo.SeckillOrder;
 import com.changgou.seckill.service.SeckillOrderService;
 import com.changgou.seckill.task.MultiThreadingCreateOrder;
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -32,6 +36,88 @@ public class SeckillOrderServiceImpl implements SeckillOrderService {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private SeckillGoodsMapper seckillGoodsMapper;
+
+    /**
+     * 删除订单
+     *
+     * @param username
+     */
+    @Override
+    public void deleteOrder(String username) {
+        // 删除订单
+        redisTemplate.boundHashOps("SeckillOrder").delete(username);
+        // 查询用户排队信息
+        SeckillStatus seckillStatus = (SeckillStatus) redisTemplate.boundHashOps("UserQueueStatus").get(username);
+        // 删除排队信息
+        clearUserQueue(username);
+
+
+        // 回滚库存->redis 递增-> redis 不一定有商品
+        String namespace = "SeckillGoods_" + seckillStatus.getTime();
+        SeckillGoods seckillGoods = (SeckillGoods) redisTemplate.boundHashOps(namespace).get(seckillStatus.getGoodsId());
+
+        // 如果商品为空
+        if (seckillGoods == null) {
+            // 数据库中查询
+            seckillGoods = seckillGoodsMapper.selectByPrimaryKey(seckillStatus.getGoodsId());
+            // 更新数据库库存
+            seckillGoods.setStockCount(1);
+            seckillGoodsMapper.updateByPrimaryKeySelective(seckillGoods);
+        } else {
+            seckillGoods.setStockCount(seckillGoods.getStockCount() + 1);
+        }
+        redisTemplate.boundHashOps(namespace).put(seckillGoods.getId(), seckillGoods);
+
+        // 队列
+        redisTemplate.boundListOps("SeckillGoodsCountList_" + seckillGoods.getId()).leftPush(seckillGoods.getId());
+    }
+
+    /**
+     * 修改秒杀订单状态
+     *
+     * @param username
+     * @param transactionid
+     * @param endtime
+     */
+    @Override
+    public void updatePayStatus(String username, String transactionid, String endtime) {
+        // 查询订单
+        SeckillOrder seckillOrder = (SeckillOrder) redisTemplate.boundHashOps("SeckillOrder").get(username);
+        if (seckillOrder != null) {
+            try {
+                // 修改订单状态信息
+                seckillOrder.setStatus("1");
+                seckillOrder.setTransactionId(transactionid);
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+                Date payTimeInfo = simpleDateFormat.parse(endtime);
+                seckillOrder.setPayTime(payTimeInfo);
+                seckillOrderMapper.insertSelective(seckillOrder);
+
+                // 删除 redis 中的订单
+                redisTemplate.boundHashOps("SeckillOrder").delete(username);
+
+                // 删除用户排队信息
+                clearUserQueue(username);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 清理用户排队抢单信息
+     *
+     * @param username
+     */
+    public void clearUserQueue(String username) {
+        // 排队标识
+        redisTemplate.boundHashOps("UserQueueCount").delete(username);
+        // 排队信息清理
+        redisTemplate.boundHashOps("UserQueueStatus").delete(username);
+    }
 
     /**
      * 抢单状态查询
@@ -54,6 +140,12 @@ public class SeckillOrderServiceImpl implements SeckillOrderService {
      */
     @Override
     public Boolean add(String time, Long id, String username) {
+        // 记录用户排队次数
+        Long userQueueCount = redisTemplate.boundHashOps("UserQueueCount").increment(username, 1);
+        if (userQueueCount > 1) {
+            throw new RuntimeException("重复排队!");
+        }
+
         // 创建排队对象
         SeckillStatus seckillStatus = new SeckillStatus(username, new Date(), 1, id, time);
         // redis 中 list 为队列，有序,SeckillOrderQueue 为用户抢单排队

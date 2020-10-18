@@ -61,7 +61,7 @@
       <module name="changgou-web-item" target="1.8" />
       <module name="changgou-web-item-api" target="1.8" />
       <module name="changgou-web-search" target="9" />
-      <module name="code-template" target="8" />
+      <module name="code-template" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

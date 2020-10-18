@@ -54,8 +54,12 @@ public class WeixinPayController {
         Map<String, String> resultMap = WXPayUtil.xmlToMap(xmlResult);
         System.out.println(resultMap);
 
+        // 获取自定义参数
+        String attach = resultMap.get("attach");
+        Map<String, String> attachMap = JSON.parseObject(attach,Map.class);
+
         // 发送支付结果给 MQ
-        rabbitTemplate.convertAndSend("exchange.order", "queue.order", JSON.toJSONString(resultMap));
+        rabbitTemplate.convertAndSend("exchange", "routingKey", JSON.toJSONString(resultMap));
 
         //响应数据设置
         Map<String, String> respMap = new HashMap<>();
@@ -78,7 +82,7 @@ public class WeixinPayController {
     }
 
     /**
-     * 创建二维码
+     * 创建二维码，区分普通订单和秒杀订单
      *
      * @param parameterMap
      * @return

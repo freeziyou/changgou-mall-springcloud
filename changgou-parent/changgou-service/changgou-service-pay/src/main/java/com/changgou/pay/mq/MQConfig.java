@@ -49,4 +49,34 @@ public class MQConfig {
     public Binding orderQueueExchange(Queue orderQueue, Exchange orderExchange) {
         return BindingBuilder.bind(orderQueue).to(orderExchange).with(env.getProperty("mq.pay.routing.order")).noargs();
     }
+
+    /**
+     * 创建秒杀队列
+     *
+     * @return
+     */
+    @Bean
+    public Queue orderSeckillQueue() {
+        return new Queue(env.getProperty("mq.pay.queue.seckillorder"));
+    }
+
+    /**
+     * 创建秒杀交换机
+     *
+     * @return
+     */
+    public Exchange orderSeckillExchange() {
+        return new DirectExchange(env.getProperty("mq.pay.exchange.seckillorder"), true, false);
+    }
+
+    /**
+     * 秒杀队列绑定秒杀交换机
+     *
+     * @param orderSeckillQueue
+     * @param orderSeckillExchange
+     * @return
+     */
+    public Binding orderSeckillQueueExchange(Queue orderSeckillQueue, Exchange orderSeckillExchange) {
+        return BindingBuilder.bind(orderSeckillQueue).to(orderSeckillExchange).with(env.getProperty("mq.pay.routing.seckillkey")).noargs();
+    }
 }

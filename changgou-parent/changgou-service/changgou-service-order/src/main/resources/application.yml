@@ -37,16 +37,16 @@ hystrix:
             timeoutInMilliseconds: 10000
           strategy: SEMAPHORE
 #位置支付交换机和队列
-#位置支付交换机和队列
 mq:
   pay:
     exchange:
       order: exchange.order
+      seckillorder: exchange.seckillorder
     queue:
       order: queue.order
       seckillorder: queue.seckillorder
       seckillordertimer: queue.seckillordertimer
       seckillordertimerdelay: queue.seckillordertimerdelay
     routing:
-      orderkey: queue.order
-      seckillorderkey: queue.seckillorder
+      key: queue.order
+      seckillkey: queue.seckillorder
